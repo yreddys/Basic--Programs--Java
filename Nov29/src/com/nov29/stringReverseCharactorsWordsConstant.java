@@ -19,3 +19,16 @@ public static void main(String[] args) {
 	
 }
 }
+
+public class Reverse {
+
+	
+		  public static void main(String[] args) {
+		    String str = "Hello reddy sekhar";
+		    for (int i = str.length() - 1; i >= 0; i--) {
+		      System.out.print(str.charAt(i));
+		    }
+		  }
+		}
+
+o/p: rahkes ydder olleH
