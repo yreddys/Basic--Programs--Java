@@ -1,4 +1,28 @@
 package com.nov29;
+package com.inter;
+
+import java.util.Arrays;
+
+public class Example {
+public static void main(String[] args) {
+String s1="hello reddy sekhar";
+
+String s2[] = s1.split(" ");
+String reversedString = "";
+for (int i = 0; i < s2.length; i++) 
+{
+  String s3 = s2[i];
+  String reverseWord = "";
+  for (int j = s3.length() - 1; j >= 0; j--) {
+    reverseWord = reverseWord + s3.charAt(j);
+  }
+  reversedString = reversedString + reverseWord + " ";
+}
+System.out.print("Reversed string : " + reversedString);
+}}
+
+Original string : hello reddy sekhar
+Reversed string :lleh ydder rahkes 
 
 public class stringReverseCharactorsWordsConstant {
 public static void main(String[] args) {
