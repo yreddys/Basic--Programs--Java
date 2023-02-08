@@ -54,5 +54,5 @@ public class Reverse {
 		    }
 		  }
 		}
-
+input : hello reddy sekhar
 o/p: rahkes ydder olleH
