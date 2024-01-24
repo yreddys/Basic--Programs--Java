@@ -133,16 +133,15 @@ public class Employee {
 	    
 
 	    
-//	    Map<String, Long> noOfMaleAndFemaleEmployees = employeeList.stream()
-//	            .collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
-//	     
-//	    System.out.println(noOfMaleAndFemaleEmployees);
+	    Map<String, Long> noOfMaleAndFemaleEmployees = employeeList.stream()
+	            .collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
+	     
+	    System.out.println(noOfMaleAndFemaleEmployees);
 
-//	    List<Long>m=employeeList.stream()
-//	    	    .map(Employee::getDepartment)
-//	    	    .distinct()
-//	    	    .forEach(System.out::println);
-//	    
+	    List<Long>m=employeeList.stream()
+	    	    .map(Employee::getDepartment).distinct()
+	    	    .forEach(System.out::println);
+	    
 	    
 
 
