@@ -1,5 +1,5 @@
 package com.nov29;
-
+// Factorial
 public class factorial {
 
 	public static void main(String[] args) {
