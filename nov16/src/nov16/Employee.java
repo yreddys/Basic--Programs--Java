@@ -109,10 +109,10 @@ public class Employee {
 
 
 	    
-//	    Map<String, Long> noOfMaleAndFemaleEmployees=
-//	    		employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
-//	    		         
-//	    		System.out.println(noOfMaleAndFemaleEmployees);
+	    Map<String, Long> noOfMaleAndFemaleEmployees=
+	    		employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
+	    		         
+	    		System.out.println(noOfMaleAndFemaleEmployees);
 	    		
 //	    		employeeList.stream()
 //	    	            .map(Employee::getDepartment)
