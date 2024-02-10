@@ -15,3 +15,22 @@ public class Reverse {
         System.out.println(reverse);
     }
 }
+
+package com.numberss;
+
+public class reverseNumString {
+    public static void main(String[] args) {
+        int s=12345;
+        String str=String.valueOf(s);
+        String reverse=new StringBuilder(str).reverse().toString();
+        int reverseNum=Integer.parseInt(reverse);
+        System.out.println(reverseNum);
+    }
+}
+
+
+
+Find the 2nd Largest Number in an Array
+
+
+
