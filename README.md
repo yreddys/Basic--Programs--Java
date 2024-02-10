@@ -1,7 +1,7 @@
 
 
 
-** Reverse a Number**
+ Reverse a Number**
 
 
 package com.numberss;
