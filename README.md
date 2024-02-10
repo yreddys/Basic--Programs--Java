@@ -1,11 +1,9 @@
-Reverse a number 
----------------
 
 
 
-## Reverse a Number
+** Reverse a Number**
 
-```java
+
 package com.numberss;
 
 public class Reverse {
