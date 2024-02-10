@@ -19,7 +19,7 @@ public class Reverse {
 }
 
 
-// How to convert String to int and int to String
+**// How to convert String to int and int to String**
 
 
 package com.numberss;
@@ -38,7 +38,7 @@ public static void main(String[] args) {
 }
 }
 
-// Java program to find the 2nd largest number in an array
+**// Java program to find the 2nd largest number in an array**
 
 public class ThirdLargestNumberInAnArray {
    public static void main(String args[]){
@@ -75,7 +75,7 @@ public class LargestNumberSample {
    }
 
 
-// Find First non repeating character in a String
+**// Find First non repeating character in a String**
 
 
 package com.arrays;
@@ -104,6 +104,8 @@ for (int i=0;i<str.length();i++) {
 }
 
 
+
+**Write a Java program to find and print the maximum consecutive repetition count for each alphabet in the given string.**
 // input str="abcabc"
 // output a=2;
  //     b=2;
