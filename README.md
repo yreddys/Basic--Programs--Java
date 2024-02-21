@@ -129,7 +129,7 @@ public class MaxConsecutiveRepetition {
         }
     }
 }
-      **Reverse A  String**
+      //  Reverse a String 
 
              String str = "Hello";
 		// Approach -1
