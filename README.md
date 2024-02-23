@@ -230,3 +230,24 @@ Set<Character> seen = new HashSet<>();
  }
 
 
+// Reverse each Word In Given String
+
+public class reverseWord {
+	public static void main(String[] args) {
+		String str = "Reddy sekhar";
+		String output="";
+		String[] words = str.split(" ");
+		
+		for(String word:words) {
+			String revWord="";
+			for(int i=word.length()-1;i>=0;i--) {
+				revWord=revWord+word.charAt(i);
+				
+				
+			}
+			output=output+revWord+"";
+		}
+		System.out.println(output);
+	}
+}
+
