@@ -211,3 +211,22 @@ public static void main(String[] args) {
 		
 		System.out.println(sb4);
 	}
+
+
+// approach -5
+
+
+
+Set<Character> seen = new HashSet<>();
+     Set<Character> duplicates = new HashSet<>();
+
+     for (char c : str.toCharArray()) {
+         if (!seen.add(c)) { 
+             duplicates.add(c);
+         }
+     }
+
+     System.out.println("Duplicate characters: " + duplicates);
+ }
+
+
