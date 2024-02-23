@@ -252,4 +252,5 @@ public class reverseWord {
 }
 
 // To Find Longest SubString without Repeating Characters
-// Find the longest word in string 
+// Find the longest word in string
+// Find the longest word in string and count
