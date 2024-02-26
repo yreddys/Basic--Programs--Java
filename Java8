@@ -3,6 +3,7 @@ package com.employee.dept;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -12,11 +13,11 @@ public class practice {
 		List<Employee> list = new ArrayList<>();
 		list.add(new Employee(1, "reddy", 100, 28));
 		list.add(new Employee(2, "red", 10, 30));
-		list.add(new Employee(3, "re", 105, 25));
-		list.add(new Employee(4, "Sekhar", 150, 25));
-                list.add(new Employee(5, "Hello", 200, 25));
-                list.add(new Employee(6, "Hi", 100, 25));
-		
+		list.add(new Employee(3, "re", 10, 25));
+		list.add(new Employee(4, "Sekhar", 150, 26));
+		list.add(new Employee(5, "Hello", 200, 25));
+		list.add(new Employee(6, "Hi", 100, 25));
+
 // Age greater than 25
 
 		List<Employee> whoseAgeGreater = list.stream().filter(e -> e.getAge() > 25).collect(Collectors.toList());
@@ -25,14 +26,25 @@ public class practice {
 		Long list2 = list.stream().filter(e -> e.getAge() > 25).collect(Collectors.counting());
 		System.out.println(list2);
 // Finding the second highest salary
-		Optional<Employee> second = list.stream().sorted(Comparator.comparingInt(Employee::getSalary).reversed()).skip(0)
-				.findFirst();
+		Optional<Employee> second = list.stream().sorted(Comparator.comparingInt(Employee::getSalary).reversed())
+				.skip(0).findFirst();
 // Finding the second highest salary
 		Optional<Employee> secondHighest = list.stream()
 				.sorted((e1, e2) -> Integer.compare(e2.getSalary(), e1.getSalary())).skip(1).findFirst();
 // Whose name start with S
-	List<Employee> namesStartwith=list.stream().filter(s->s.getName().startsWith("s")).collect(Collectors.toList());
+		List<Employee> namesStartwith = list.stream().filter(s -> s.getName().startsWith("s"))
+				.collect(Collectors.toList());
 		System.out.println(secondHighest);
+
+// To group employees by age		
+
+		Map<Integer, List<Employee>> employeesByAge = list.stream().collect(Collectors.groupingBy(Employee::getAge));
+
+		employeesByAge.forEach((age, employees) -> {
+			System.out.println("Age: " + age);
+			employees.forEach(System.out::println);
+			System.out.println("--------------------");
+		});
 
 	}
 }
