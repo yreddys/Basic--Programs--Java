@@ -13,7 +13,9 @@ public class practice {
 		list.add(new Employee(1, "reddy", 100, 28));
 		list.add(new Employee(2, "red", 10, 30));
 		list.add(new Employee(3, "re", 105, 25));
-		list.add(new Employee(4, "Sekhar", 150, 26));
+		list.add(new Employee(4, "Sekhar", 150, 25));
+                list.add(new Employee(5, "Hello", 200, 25));
+                list.add(new Employee(6, "Hi", 100, 25));
 		
 // Age greater than 25
 
