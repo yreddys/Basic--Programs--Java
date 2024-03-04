@@ -315,5 +315,29 @@ public class findTheLengthOfLastWord {
 	}
 }
 
-// Find the longest word in string
-// Find the longest word in string and count
+// 10. Find the longest word in string
+
+package com.problems;
+
+public class longestWord {
+
+	static String LongestWord(String str) {
+		String longWord;
+		String arr[] = str.split(" ");
+		longWord = arr[0];
+		for (String a : arr) {
+			if (longWord.length() < a.length()) {
+				longWord = a;
+			}
+		}
+		return longWord;
+	}
+
+	public static void main(String[] args) {
+		String s = LongestWord("Hello Reddysekhar How are you");
+		System.out.println(s);
+	}
+}
+
+
+// .Find the longest word in string and count
