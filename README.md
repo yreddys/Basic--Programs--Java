@@ -252,5 +252,43 @@ public class reverseWord {
 }
 
 // To Find Longest SubString without Repeating Characters
+
+package com.problems;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class longestSubstringWithoutRepeating {
+	static void longestSubstring(String s) {
+		String LongestSubstring = null;
+		int LongestSubstringLength = 0;
+		Map<Character, Integer> map = new LinkedHashMap<>();
+		char[] arr = s.toCharArray();
+		for (int i = 0; i < arr.length; i++) {
+			char ch = arr[i];
+			if (!map.containsKey(ch)) {
+				map.put(ch, i);
+
+			} else {
+				i = map.get(ch);
+				map.clear();
+			}
+			if (map.size() > LongestSubstringLength) {
+				LongestSubstringLength = map.size();
+				LongestSubstring = map.keySet().toString();
+
+			}
+
+		}
+		System.out.println(LongestSubstring);
+		System.out.println(LongestSubstringLength);
+	}
+
+	public static void main(String[] args) {
+		longestSubstring("abcabc");
+	}
+}
+
+
 // Find the longest word in string
 // Find the longest word in string and count
