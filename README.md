@@ -289,6 +289,31 @@ public class longestSubstringWithoutRepeating {
 	}
 }
 
+// 9. findTheLengthOfLastWordInString
+
+public class findTheLengthOfLastWord {
+
+	
+
+	static int lastWordLength(String str) {
+		int count = 0;
+		for (int i = str.length() - 1; i >= 0; i--) {
+			char c = str.charAt(i);
+			if (c != ' ') {
+				count++;
+			} else {
+				break;
+			}
+		}
+
+		return count;
+	}
+
+	public static void main(String[] args) {
+		int countLastWodrds = lastWordLength("Hello buddy i am here");
+		System.out.println(countLastWodrds);
+	}
+}
 
 // Find the longest word in string
 // Find the longest word in string and count
