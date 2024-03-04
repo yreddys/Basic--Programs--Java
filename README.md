@@ -1,4 +1,4 @@
-## Reverse a Number
+## 1. Reverse a Number
 
 ```java
 package com.numberss;
@@ -30,7 +30,7 @@ public class reverseNumString {
 
 
 
-// Java program to find the 2nd largest number in an array
+// 2.Java program to find the 2nd largest number in an array
 
 public class ThirdLargestNumberInAnArray {
    public static void main(String args[]){
@@ -67,7 +67,7 @@ public class LargestNumberSample {
    }
 
 
-// Find First non repeating character in a String
+//3. Find First non repeating character in a String
 
 
 package com.arrays;
@@ -96,7 +96,7 @@ for (int i=0;i<str.length();i++) {
 }
 
 
-// input str="abcabc"
+// 4.input str="abcabc"
 // output a=2;
  //     b=2;
 //      c=2;
@@ -131,7 +131,7 @@ public class MaxConsecutiveRepetition {
 }
 
 
-   //  Reverse a String 
+   //  5. Reverse a String 
 
              String str = "Hello";
 		// Approach -1
@@ -153,7 +153,7 @@ public class MaxConsecutiveRepetition {
 		System.out.println(sb1.reverse());
 
 
-// Removing Duplicates from String
+// 6.Removing Duplicates from String
 
 
 
@@ -230,7 +230,7 @@ Set<Character> seen = new HashSet<>();
  }
 
 
-// Reverse each Word In Given String
+// 7. Reverse each Word In Given String
 
 public class reverseWord {
 	public static void main(String[] args) {
@@ -251,7 +251,7 @@ public class reverseWord {
 	}
 }
 
-// To Find Longest SubString without Repeating Characters
+// 8.To Find Longest SubString without Repeating Characters
 
 package com.problems;
 
