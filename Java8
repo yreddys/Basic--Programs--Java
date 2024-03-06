@@ -46,5 +46,12 @@ public class practice {
 			System.out.println("--------------------");
 		});
 
+// finding the avg age 
+		
+		Map<String, Double> avgAgeByName = list.stream()
+                .collect(Collectors.groupingBy(Employee::getName, Collectors.averagingInt(Employee::getAge)));
+		System.out.println(avgAgeByName);
+
+
 	}
 }
