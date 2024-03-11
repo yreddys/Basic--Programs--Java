@@ -95,8 +95,9 @@ for (int i=0;i<str.length();i++) {
 }
 }
 
+4. program to find MaxConsecutiveRepetition in String?
 
-// 4.input str="abcabc"
+// input str="abcabc"
 // output a=2;
  //     b=2;
 //      c=2;
@@ -340,4 +341,68 @@ public class longestWord {
 }
 
 
-// .Find the longest word in string and count
+// 11 .Find the length of each word in String
+
+
+
+
+package longestWord;
+ class lengthOfeachWord {
+	public static void lengthofeachword(String str) {
+		StringBuilder word = new StringBuilder();
+		str=str+" ";
+		for(int i=0;i<str.length();i++) {
+			char c = str.charAt(i);
+			if(c!=' ') {
+				word.append(c);
+			}
+			else {
+				if(word.length()>0) {
+					System.out.println(word+" "+word.length());
+					word.setLength(0);
+				}
+			}
+		}
+	}
+	public static void main(String[] args) {
+		lengthofeachword("i am an aiExpert");
+	}
+}
+
+
+
+//  12 .Find the longest word in string and count
+
+
+class maxLengthInString {
+    public static void maxLengthInString(String str) {
+        StringBuilder word = new StringBuilder();
+        str = str + " ";
+        int maxLength = 0; // Variable to store the maximum length of a word
+        String maxWord = ""; // Variable to store the word with the maximum length
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (c != ' ') {
+                word.append(c);
+            } else {
+                if (word.length() > 0) {
+                    System.out.println(word + " " + word.length());
+                    if (word.length() > maxLength) {
+                        maxLength = word.length();
+                        maxWord = word.toString(); // Update maxWord if a longer word is found
+                    }
+                    word.setLength(0);
+                }
+            }
+        }
+        System.out.println("Maximum length word: " + maxWord + ", Length: " + maxLength);
+    }
+
+    public static void main(String[] args) {
+        maxLengthInString("i am an aiExpert");
+    }
+}
+
+
+
+
