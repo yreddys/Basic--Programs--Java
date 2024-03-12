@@ -36,22 +36,23 @@ public class reverseNumString {
 
  **Palindrome for String**
 
-public class palindrome {
-public static void main(String[] args) {
-	
-String str="RRR";
-String Reverse="";
-for (int i=str.length()-1;i>=0;i--)
-Reverse=Reverse+str.charAt(i);
-if (str.equals(Reverse)) 
-	
-	System.out.println("palindrome");
+public class StringPalindrome {
+	public static void main(String[] args) {
+		String st = "RRR";
+		String Reverse = "";
+		for (int i = st.length() - 1; i >= 0; i--) {
+			Reverse = Reverse + st.charAt(i);
 
-else
-	System.out.println("not a palindrome");
-	
+		}
+		if (st.equals(Reverse)) {
+			System.out.println("Palindrome");
+
+		} else {
+			System.out.println("Not a palindrome");
+		}
+	}
 }
-}
+
 
 // 2. Java program to find the 2nd largest number in an array
 
