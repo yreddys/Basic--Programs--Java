@@ -9,9 +9,13 @@ public class Reverse {
     public static void main(String[] args) {
         int num = 12345;
         int reverse = 0;
-        while (num != 0) {
+         while (num != 0) {
+            // Extract the last digit of the original number
             int digit = num % 10;
+            // Add the last digit to the reversed number,
+            // shifting the existing digits of the reversed number one place to the left
             reverse = reverse * 10 + digit;
+            // Remove the last digit from the original number
             num = num / 10;
         }
         System.out.println(reverse);
