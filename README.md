@@ -1,6 +1,6 @@
-## 1. Reverse a Number
+**basicPrograms**
 
-```java
+ // 1. Reverse A number / Palindrome 
 package com.numberss;
 
 public class Reverse {
