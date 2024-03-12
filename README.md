@@ -1,7 +1,7 @@
 
 
 ```java
-// 1. Reverse a number 
+// 1. Reverse a number / Palindrome
 
 package com.numberss;
 
