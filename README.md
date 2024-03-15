@@ -364,3 +364,38 @@ class maxLengthInString {
 }
 ```
 
+// program to find all permutations of a string 
+
+package com.march15;
+
+public class permutations {
+	static void StringPermutations(String s) {
+
+		System.out.println("Permutations of string :" + s);
+		Stringpermutations("", s);
+
+	}
+
+	private static void Stringpermutations(String str, String input) {
+
+		if (input.length() == 0) {
+			System.out.println(str);
+
+		} else {
+
+			for (int i = 0; i < input.length(); i++) {
+
+				Stringpermutations(str + input.charAt(i),
+						input.substring(0, i) + input.substring(i + 1, input.length()));
+
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		StringPermutations("How");
+	}
+}
+
+
+
