@@ -362,7 +362,7 @@ class maxLengthInString {
         maxLengthInString("i am an aiExpert");
     }
 }
-```
+
 
 // program to find all permutations of a string 
 
@@ -397,5 +397,5 @@ public class permutations {
 	}
 }
 
-
+```
 
