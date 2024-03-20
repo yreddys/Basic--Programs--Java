@@ -399,5 +399,10 @@ public class permutations {
 
 // 13 . Java program to find the first and last index of a given integer in an array?
 // 14. Program to  find the common values between two lists using Java 8 streams ?
+// 15. Can you  write a program that counts the number of zeros in an array?
+
+
+Input : {0, 2, 0, 4, 0, 6, 0}
+Output: 4
 ```
 
