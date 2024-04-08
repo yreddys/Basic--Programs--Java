@@ -417,6 +417,37 @@ public class frequencyOfChar {
 		frequencyMap.forEach((character, frequency) -> System.out.println(character + ": " + frequency));
 	}
 }
+// java program to reverse an array
+package com.java8;
+
+import java.util.Arrays;
+
+public class reverseArray {
+	public static void main(String[] args) {
+		// Input char array
+		char[] input = { 'a', 'b', 'c', 'd' };
+
+		// Reverse the input char array
+		char[] reversed = reverseCharArray(input);
+
+		// Print the reversed char array
+		System.out.println("Reversed char array:");
+		System.out.println(Arrays.toString(reversed));
+	}
+
+// Method to reverse a char array and return the reversed array
+	public static char[] reverseCharArray(char[] arr) {
+		char[] reversed = new char[arr.length];
+
+		for (int i = 0; i < arr.length; i++) {
+			reversed[i] = arr[arr.length - 1 - i];
+		}
+
+		return reversed;
+
+	}
+}
+
 
 //  Java program to find the first and last index of a given integer in an array?
 //  Program to  find the common values between two lists using Java 8 streams ?
