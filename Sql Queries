@@ -4,3 +4,22 @@ SELECT DISTINCT salary
 FROM employee 
 ORDER BY salary DESC 
 LIMIT 1 OFFSET 2;
+
+// OFFSET 2 third highest sal
+// OFFSET 1 second higest sal
+// OFFSET 0 highest sal
+
+
+2. finding the duplicate values
+
+SELECT sal, COUNT(*) AS duplicate_count
+FROM hello
+GROUP BY sal
+HAVING COUNT(*) > 1;
+
+3. finding the distinct salary
+
+SELECT DISTINCT sal
+FROM hello;
+
+
