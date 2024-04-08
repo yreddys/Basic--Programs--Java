@@ -1,8 +1,5 @@
-### Finding the Third-Highest Salary
+1. Finding the Third-Highest Salary
 
-
-
-```sql
 SELECT DISTINCT salary 
 FROM employee 
 ORDER BY salary DESC 
