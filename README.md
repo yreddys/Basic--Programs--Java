@@ -397,9 +397,30 @@ public class permutations {
 	}
 }
 
-// 13 . Java program to find the first and last index of a given integer in an array?
-// 14. Program to  find the common values between two lists using Java 8 streams ?
-// 15. Can you  write a program that counts the number of zeros in an array?
+// 14 . java8 program to find the frequency of character
+
+package com.java8;
+
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class frequencyOfChar {
+	public static void main(String[] args) {
+
+		String inputString = "reedysekahrreddysekahr";
+
+		Map<Character, Long> frequencyMap = inputString.chars().mapToObj(c -> (char) c)
+				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+		System.out.println("Frequency of each character:");
+		frequencyMap.forEach((character, frequency) -> System.out.println(character + ": " + frequency));
+	}
+}
+
+//  Java program to find the first and last index of a given integer in an array?
+//  Program to  find the common values between two lists using Java 8 streams ?
+// Can you  write a program that counts the number of zeros in an array?
 
 
 Input : {0, 2, 0, 4, 0, 6, 0}
