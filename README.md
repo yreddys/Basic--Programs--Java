@@ -34,7 +34,7 @@ public class reverseNumString {
     }
 }
 
- **Palindrome for String**
+  //  Palindrome for String  
 
 public class StringPalindrome {
 	public static void main(String[] args) {
@@ -509,7 +509,7 @@ public class WordCounter {
 }
 
 
-// Factorial
+18 .Factorial
 public class factorial {
 
 	public static void main(String[] args) {
@@ -532,7 +532,7 @@ public class factorial {
 	
 }
 
-// factors 
+19. factors 
 
 
 
@@ -551,7 +551,7 @@ public class factors {
 
 
 
-// Fibonacci
+20 Fibonacci
 
 
 public class fibonacci {
@@ -664,7 +664,7 @@ public class stringReverseWordByWord {
 
 
 
- // swapping
+ 21 swapping
 
 
 package com.nov29;
