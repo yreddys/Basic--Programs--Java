@@ -509,6 +509,197 @@ public class WordCounter {
 }
 
 
+// Factorial
+public class factorial {
+
+	public static void main(String[] args) {
+		
+		int fact=1;
+		int n=5;
+		for (int i=1;i<=n;i++) {
+			
+		
+			
+			fact=fact*i;
+			
+				
+				
+			}
+	System.out.println(fact);
+	
+		}
+		
+	
+}
+
+// factors 
+
+
+
+public class factors {
+
+	public static void main(String[] args) {
+		
+		int n=10;
+		for (int i=1;i<=n;i++)
+	if (n%i==0)	{
+		System.out.print(i+" ");
+			
+		}
+	}
+}
+
+
+
+// Fibonacci
+
+
+public class fibonacci {
+
+	public static void main(String[] args) {
+		
+		int n1=0;
+		int n2=1;
+		int n3;
+		int n4=10;
+		System.out.println(n1+" "+n2);
+		
+		for (int i=2;i<n4;i++) {
+			n3=n1+n2;
+			
+			System.out.print(n3+" ");
+			
+			n1=n2;
+			n2=n3;
+			
+			
+		}
+	}
+}
+
+
+
+
+// String Reverse
+
+
+
+import java.util.Arrays;
+
+public class Example {
+public static void main(String[] args) {
+String s1="hello reddy sekhar";
+
+String s2[] = s1.split(" ");
+String reversedString = "";
+for (int i = 0; i < s2.length; i++) 
+{
+  String s3 = s2[i];
+  String reverseWord = "";
+  for (int j = s3.length() - 1; j >= 0; j--) {
+    reverseWord = reverseWord + s3.charAt(j);
+  }
+  reversedString = reversedString + reverseWord + " ";
+}
+System.out.print("Reversed string : " + reversedString);
+}}
+
+Original string : hello reddy sekhar
+Reversed string :lleh ydder rahkes 
+
+public class stringReverseCharactorsWordsConstant {
+public static void main(String[] args) {
+	
+	String str="Hello reddy sekhar";
+	String []str3=str.split(" ");
+	String str2="";
+	for(int i=str3.length-1;i>=0;i--) {
+		String str4=str3[i];
+		String str5="";
+		for (int j=str4.length()-1;j>=0;j--) {
+			str5=str5+str4.charAt(j);
+		}
+		
+		str2=str2+str5+" ";
+	}
+	System.out.println(str2);
+	
+}
+}
+
+public class Reverse {
+
+	
+		  public static void main(String[] args) {
+		    String str = "Hello reddy sekhar";
+		    for (int i = str.length() - 1; i >= 0; i--) {
+		      System.out.print(str.charAt(i));
+		    }
+		  }
+		}
+input : hello reddy sekhar
+o/p: rahkes ydder olleH
+
+
+
+
+// stringReverseWordByWord 
+
+public class stringReverseWordByWord {
+
+	public static void main(String[] args) {
+		
+		String s1="hello reddy sekhar";
+	
+		String [] s3=s1.split(" ");
+		for (int i=s3.length-1;i>=0;i--){
+			
+			
+			System.out.print(s3[i]+" ");
+		}
+		
+		
+	}
+}
+
+
+
+ // swapping
+
+
+package com.nov29;
+
+public class swapping {
+
+	public static void main(String[] args) {
+		
+		int a=10;
+		int b=30;
+		
+		a=a+b;
+		b=a-b;
+		a=a-b;
+		System.out.println(a+" "+b);
+	}
+}
+
+  // swappingWithThirdVaraible
+
+
+public class swappingWithThirdVaraible {
+
+	public static void main(String[] args) {
+	
+		int a=10;
+		int b=20;
+		int temp;
+	temp=a;
+	a=b;
+	b=temp;
+	
+	System.out.println(a+" "+b);
+	}
+}
 
 //  Java program to find the first and last index of a given integer in an array?
 //  Program to  find the common values between two lists using Java 8 streams ?
