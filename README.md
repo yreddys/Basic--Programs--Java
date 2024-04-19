@@ -417,7 +417,7 @@ public class frequencyOfChar {
 		frequencyMap.forEach((character, frequency) -> System.out.println(character + ": " + frequency));
 	}
 }
-// java program to reverse an array
+// 15. java program to reverse an array
 package com.java8;
 
 import java.util.Arrays;
@@ -448,7 +448,7 @@ public class reverseArray {
 	}
 }
 
-15 . to find pairs of integers in an array that sum up to a given target sum.?
+16. to find pairs of integers in an array that sum up to a given target sum.?
 
 I/P: {0, 4, 5, 6, 1, 2, 3};
 O/P:
@@ -477,6 +477,35 @@ public class pairs {
 	                .filter(num -> set.contains(targetSum - num) && num <= targetSum - num)
 	                .forEach(num -> System.out.println(num + "," + (targetSum -num)));
 	}
+}
+
+17 . Write a program that utilizes a HashMap to count the occurrences of each word
+
+ 
+
+import java.util.HashMap;
+
+public class WordCounter {
+    public static void main(String[] args) {
+        String text = "String is i am reddy sekhar";
+
+        // Split the text into words
+        String[] words = text.split("\\s+");
+
+        // Create a HashMap to store word counts
+        HashMap<String, Integer> wordCounts = new HashMap<>();
+
+        // Iterate through each word and update its count in the HashMap
+        for (String word : words) {
+            // Update word count
+            wordCounts.put(word, wordCounts.getOrDefault(word, 0) + 1);
+        }
+
+        // Print the word counts
+        for (String word : wordCounts.keySet()) {
+            System.out.println(word + ": " + wordCounts.get(word));
+        }
+    }
 }
 
 
