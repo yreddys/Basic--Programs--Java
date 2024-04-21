@@ -52,6 +52,19 @@ public class practice {
                 .collect(Collectors.groupingBy(Employee::getName, Collectors.averagingInt(Employee::getAge)));
 		System.out.println(avgAgeByName);
 
+// Group the Words by length 
 
-	}
+List<String> list = Arrays.asList("I am Reddysekhar working At Wipro");
+		Map<Integer, List<String>> countWordsLengthAndGrouping = Arrays.stream(list.get(0).split(" "))
+                .collect(Collectors.groupingBy(String::length));
+
+		countWordsLengthAndGrouping.forEach((emp, words) -> {
+			System.out.println("Count:" + emp);
+			System.out.println("Words:" + words);
+			System.out.println("---------------");
+		});
+	
+
+}
+}
 }
