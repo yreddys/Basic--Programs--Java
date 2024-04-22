@@ -66,5 +66,14 @@ List<String> list = Arrays.asList("I am Reddysekhar working At Wipro");
 	
 
 }
-}
-}
+
+// group the department and find the count
+
+
+		Map<String, Long> departmentCount = list.stream()
+				.collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
+
+		departmentCount.forEach((department, count) -> System.out.println(department + ": " + count));
+
+
+}}
