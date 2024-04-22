@@ -701,6 +701,43 @@ public class swappingWithThirdVaraible {
 	}
 }
 
+ // 22 .Reverse an Array
+
+package java8;
+
+public class arrayReverse {
+	public static void reverseArray(int[] arr) {
+		int a = 0;
+		int b = arr.length - 1;
+
+		while (a < b) {
+			// Swap elements at start and end indices
+			int temp = arr[a];
+			arr[a] = arr[b];
+			arr[b] = temp;
+
+			// Move pointers towards the center
+			a++;
+			b--;
+		}
+
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+	}
+
+	public static void main(String[] args) {
+		int[] arr = { 1, 2, 3, 4, 5 };
+		
+
+		// Reverse the array
+		reverseArray(arr);
+
+		
+
+	}
+}
+
 //  Java program to find the first and last index of a given integer in an array?
 //  Program to  find the common values between two lists using Java 8 streams ?
 // Can you  write a program that counts the number of zeros in an array?
