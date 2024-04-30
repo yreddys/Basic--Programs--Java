@@ -737,6 +737,20 @@ public class arrayReverse {
 
 	}
 }
+// Reverse an Array
+
+package com.MultiDime;
+
+public class ReverseAnArray {
+	public static void main(String[] args) {
+		int[] arr = { 1, 2, 3, 4, 5 };
+		for (int i = arr.length - 1; i >= 0; i--) {
+			System.out.println(arr[i]);
+		}
+	}
+}
+
+
 
 //  Java program to find the first and last index of a given integer in an array?
 //  Program to  find the common values between two lists using Java 8 streams ?
