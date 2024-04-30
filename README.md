@@ -750,6 +750,24 @@ public class ReverseAnArray {
 	}
 }
 
+// Second Highest Element from an Array
+
+package com.MultiDime;
+
+import java.util.Arrays;
+
+public class SecondHighest {
+    public static void main(String[] args) {
+        int arr[] = { 1, 2, 3, 4, 5 };
+        Arrays.sort(arr); // Sort the array
+
+        // After sorting, the second highest element will be at index length - 2
+        int secondHighest = arr[arr.length - 2];
+
+        System.out.println("The second highest element is: " + secondHighest);
+    }
+}
+
 
 
 //  Java program to find the first and last index of a given integer in an array?
