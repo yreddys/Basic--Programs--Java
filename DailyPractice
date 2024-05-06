@@ -76,6 +76,8 @@ public class findTheDuplicateOccurenaces {
 
 
 
+// grouping the Employee
+
 
 package com.employee;
 
@@ -100,4 +102,27 @@ public class Highest {
         });
 	}
 }
+
+
+
+ //  second Highest salary
+
+package com.employee;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+public class secondHighestSal {
+	public static void main(String[] args) {
+		List<Integer> emp = Arrays.asList(10, 20, 30, 40, 50);
+	Optional<Integer> secondHighest = emp.stream().distinct().sorted((e1, e2) -> e2.compareTo(e1)).skip(1)
+				.findFirst();
+
+		System.out.println(secondHighest);
+
+	}
+}
+
+
 
