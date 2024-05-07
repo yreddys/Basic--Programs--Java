@@ -125,4 +125,118 @@ public class secondHighestSal {
 }
 
 
+package com.occurance;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class Occurance {
+	public static void main(String[] args) {
+		List<String> list = Arrays.asList("Hello reddy sekhar hello reddy sekhar");
+		Map<String, Long> occurrence = list.stream().flatMap(str -> Arrays.stream(str.split(" ")))
+				.collect(Collectors.groupingBy(String::toLowerCase, Collectors.counting()));
+		occurrence.forEach((word, count) -> System.out.println(word + " = " + count));
+	}
+}
+
+
+O/p:
+
+reddy = 2
+hello = 2
+sekhar = 2
+
+
+
+package com.occurance;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class OccuranceUsingMap {
+	public static void main(String[] args) {
+		List<String> list = Arrays.asList("Hello reddy hello reddy".split(" "));
+		Map<Object, Long> occurances = list.stream()
+				.collect(Collectors.groupingBy(String::toLowerCase, Collectors.counting()));
+
+		occurances.forEach((word, count) -> System.out.println(word + "=" + count));
+	}
+}
+
+
+
+
+
+O/p:
+
+reddy = 2
+hello = 2
+sekhar = 2
+
+
+
+package com.occurance;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+
+public class OccuranceUsingMap {
+	public static void main(String[] args) {
+		String input = "Hellohello";
+		HashMap<Character, Integer> occurrence = new HashMap<>();
+
+		for (char c : input.toCharArray()) {
+			occurrence.put(c, occurrence.getOrDefault(c, 0) + 1);
+		}
+
+		occurrence.forEach((character, count) -> System.out.println(character + " = " + count));
+	}
+}
+
+
+o/p:
+
+e = 2
+H = 1
+h = 1
+l = 4
+o = 2
+
+
+
+package com.occurance;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+
+public class OccurrenceUsingMap {
+    public static void main(String[] args) {
+        List<String> str = Arrays.asList("Hello hello redy redy".split(" "));
+        HashMap<String, Integer> occurrence = new HashMap<>();
+
+        for (String c : str) {
+            occurrence.put(c, occurrence.getOrDefault(c, 0) + 1);
+        }
+
+        occurrence.forEach((character, count) -> System.out.println(character + " = " + count));
+    }
+}
+
+
+
+o/p:
+
+
+Hello = 1
+hello = 1
+redy = 2
+
+
+
 
