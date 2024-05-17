@@ -77,3 +77,21 @@ List<String> list = Arrays.asList("I am Reddysekhar working At Wipro");
 
 
 }}
+
+
+// Java 8 program to find the even numbers 
+
+List<Integer> numbers=Arrays.asList(10,20,25,27,30);
+numbers.stream().filter(n->n%2==0).forEach(System.out::println);
+
+// java 8 program to find the duplicate numbers from the list
+
+List<Integer> numbers=Arrays.asList(10,20,20,25,25,27,30);
+Set<Integer> hs=new HashSet<>();
+numbers.stream().filter(n->!hs.add(n)).forEach(System.out::println);
+
+// java 8 program to sor the list in the descending order 
+
+List<Integer> numbers=Arrays.asList(10,20,25,27,30);
+numbers.stream().sorted(Colections.reverseOrder()).forEach(System.out::println);
+
