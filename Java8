@@ -90,7 +90,7 @@ List<Integer> numbers=Arrays.asList(10,20,20,25,25,27,30);
 Set<Integer> hs=new HashSet<>();
 numbers.stream().filter(n->!hs.add(n)).forEach(System.out::println);
 
-// java 8 program to sor the list in the descending order 
+// java 8 program to sort the list in the descending order 
 
 List<Integer> numbers=Arrays.asList(10,20,25,27,30);
 numbers.stream().sorted(Colections.reverseOrder()).forEach(System.out::println);
