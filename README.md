@@ -397,6 +397,40 @@ public class permutations {
 	}
 }
 
+using swapping
+-------------------
+package may13;
+
+public class permutations {
+    public static void main(String[] args) {
+        String str = "ABC";
+        permute(str, 0);
+    }
+
+    public static void permute(String str, int currentIndex) {
+        if (currentIndex == str.length() - 1) {
+            System.out.println(str);
+        } else {
+            for (int i = currentIndex; i < str.length(); i++) {
+                str = swap(str, currentIndex, i);
+                permute(str, currentIndex + 1);
+                str = swap(str, currentIndex, i); // backtrack
+            }
+        }
+    }
+
+    private static String swap(String str, int i, int j) {
+        char[] charArray = str.toCharArray();
+        char temp = charArray[i];
+        charArray[i] = charArray[j];
+        charArray[j] = temp;
+        return String.valueOf(charArray);
+    }
+}
+
+
+
+
 // 14 . java8 program to find the frequency of character
 
 package com.java8;
