@@ -789,7 +789,7 @@ public class SecondHighest {
     }
 }
 
-// java program to move to zero first
+// java program to move zero to first
 input:0,1,0,1,1,0
 Output:0,0,0,1,1,1
 // Java program to check if two strings are anagrams
