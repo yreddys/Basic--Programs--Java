@@ -789,7 +789,9 @@ public class SecondHighest {
     }
 }
 
-
+// java program to move to zero first
+input:0,1,0,1,1,0
+Output:0,0,0,1,1,1
 // Java program to check if two strings are anagrams
 //  Java program to find the first and last index of a given integer in an array?
 //  Program to  find the common values between two lists using Java 8 streams ?
