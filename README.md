@@ -792,6 +792,44 @@ public class SecondHighest {
 // java program to move zero to first
 input:0,1,0,1,1,0
 Output:0,0,0,1,1,1
+
+public class move zeroToFirst {
+    public static void main(String[] args) {
+        int[] array = {0, 1, 0, 1, 1, 0};
+        sortBinaryArray(array);
+        
+        // Print the sorted array
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static void zeroToFirst(int[] array) {
+        int left = 0;
+        int right = array.length - 1;
+
+        while (left < right) {
+            // Move the left pointer to the right as long as it points to 0
+            while (left < right && array[left] == 0) {
+                left++;
+            }
+            // Move the right pointer to the left as long as it points to 1
+            while (left < right && array[right] == 1) {
+                right--;
+            }
+            // Swap elements if left < right
+            if (left < right) {
+                int temp = array[left];
+                array[left] = array[right];
+                array[right] = temp;
+                left++;
+                right--;
+            }
+        }
+    }
+}
+
+
 // Java program to check if two strings are anagrams
 //  Java program to find the first and last index of a given integer in an array?
 //  Program to  find the common values between two lists using Java 8 streams ?
