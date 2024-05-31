@@ -533,6 +533,43 @@ public class Main {
 }
 
 
+ to find pairs of integers in an array that multiply  to a given target sum.?
+
+package com.practice;
+
+import java.util.HashSet;
+
+public class PairProduct {
+
+    public static void findPairsWithProduct(int[] arr, int targetProduct) {
+        // HashSet to store the elements we have seen so far
+        HashSet<Integer> seen = new HashSet<>();
+
+        for (int num : arr) {
+            // Avoid division by zero and check if targetProduct is divisible by the current element
+            if (num != 0 && targetProduct % num == 0) {
+                int complement = targetProduct / num;
+
+                // If the complement is already in the set, print the pair
+                if (seen.contains(complement)) {
+                    System.out.println(num + ", " + complement);
+                }
+            }
+
+            // Add the current element to the set
+            seen.add(num);
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {0, 4, 5, 6, 1, 2, 3};
+        int targetProduct = 6;  // Example target product
+
+        findPairsWithProduct(arr, targetProduct);
+    }
+}
+
+
 
 17 . Write a program that utilizes a HashMap to count the occurrences of each word
 
@@ -862,7 +899,7 @@ public class move zeroToFirst {
         }
     }
 }
-
+ 
 
 // Java program to check if two strings are anagrams
 //  Java program to find the first and last index of a given integer in an array?
