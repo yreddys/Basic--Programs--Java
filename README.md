@@ -968,12 +968,36 @@ public class movingZeros {
     }
 }
 
+// Array Rotation to left In java
+
+package com.array;
+
+public class arrayRotationToLeft {
+	public static void main(String[] args) {
+		int a[] = { 1, 2, 3, 4, 5, 6 };
+		for (int i = 0; i < 2; i++) {
+			int start = a[0];
+			int j;
+
+			for (j = 0; j < a.length - 1; j++) {
+				a[j] = a[j + 1];
+			}
+			a[j] = start;
+
+		}
+		for (int i = 0; i < a.length; i++) {
+			System.out.println(a[i]);
+		}
+	}
+}
+
+
 
 // Java program to check if two strings are anagrams
 //  Java program to find the first and last index of a given integer in an array?
 //  Program to  find the common values between two lists using Java 8 streams ?
 // Valid Parenthesis problem in java
-// Array Rotation In java
+
 // Can you  write a program that counts the number of zeros in an array?
 Input : {0, 2, 0, 4, 0, 6, 0}
 Output: 4
