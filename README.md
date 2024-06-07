@@ -930,6 +930,44 @@ public class movingZeros {
     }
 }
 
+// Moving Zeros to Last
+
+package com.array;
+
+public class movingZeros {
+    public static void main(String[] args) {
+        int[] arr = { 1, 2, 0, 3, 0, 0, 4, 5 };
+        moveZerosToEnd(arr);
+        for (int num : arr) {
+            System.out.println(num);
+        }
+    }
+
+    private static void moveZerosToEnd(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start < end) {
+            // Find the first zero element from the beginning
+            while (start < end && arr[start] != 0) {
+                start++;
+            }
+            // Find the first non-zero element from the end
+            while (start < end && arr[end] == 0) {
+                end--;
+            }
+            // Swap elements to move zero to the end
+            if (start < end) {
+                int temp = arr[start];
+                arr[start] = arr[end];
+                arr[end] = temp;
+                start++;
+                end--;
+            }
+        }
+    }
+}
+
 
 // Java program to check if two strings are anagrams
 //  Java program to find the first and last index of a given integer in an array?
