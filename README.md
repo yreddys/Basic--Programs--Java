@@ -894,42 +894,42 @@ public class SecondHighest {
 input:0,1,0,1,1,0
 Output:0,0,0,1,1,1
 
-public class move zeroToFirst {
+package com.array;
+
+public class movingZeros {
     public static void main(String[] args) {
-        int[] array = {0, 1, 0, 1, 1, 0};
-        sortBinaryArray(array);
-        
-        // Print the sorted array
-        for (int num : array) {
-            System.out.print(num + " ");
+        int[] arr = { 1, 2, 0, 3, 0, 0, 4, 5 };
+        moveZerosToStart(arr);
+        for (int num : arr) {
+            System.out.println(num);
         }
     }
 
-    public static void zeroToFirst(int[] array) {
-        int left = 0;
-        int right = array.length - 1;
+    private static void moveZerosToStart(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
 
-        while (left < right) {
-            // Move the left pointer to the right as long as it points to 0
-            while (left < right && array[left] == 0) {
-                left++;
+        while (start < end) {
+            // Find the first non-zero element from the beginning
+            while (start < end && arr[start] == 0) {
+                start++;
             }
-            // Move the right pointer to the left as long as it points to 1
-            while (left < right && array[right] == 1) {
-                right--;
+            // Find the first zero element from the end
+            while (start < end && arr[end] != 0) {
+                end--;
             }
-            // Swap elements if left < right
-            if (left < right) {
-                int temp = array[left];
-                array[left] = array[right];
-                array[right] = temp;
-                left++;
-                right--;
+            // Swap elements to move zero to the front
+            if (start < end) {
+                int temp = arr[start];
+                arr[start] = arr[end];
+                arr[end] = temp;
+                start++;
+                end--;
             }
         }
     }
 }
- 
+
 
 // Java program to check if two strings are anagrams
 //  Java program to find the first and last index of a given integer in an array?
