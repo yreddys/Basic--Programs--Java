@@ -991,6 +991,43 @@ public class arrayRotationToLeft {
 	}
 }
 
+ // Remove All Adjacent Duplicates In String
+
+package com.java8;
+
+import java.util.Stack;
+
+public class RemoveAdjacentDuplicates {
+    public String removeDuplicates(String s) {
+        Stack<Character> stack = new Stack<>();
+        
+        for (char c : s.toCharArray()) {
+            if (!stack.isEmpty() && stack.peek() == c) {
+                stack.pop();
+            } else {
+                stack.push(c);
+            }
+        }
+        
+        StringBuilder result = new StringBuilder();
+        for (char c : stack) {
+            result.append(c);
+        }
+        
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        RemoveAdjacentDuplicates solution = new RemoveAdjacentDuplicates();
+        
+        // Test cases
+        String s1 = "aabbaacca";
+        System.out.println("Input: " + s1);
+        System.out.println("Output: " + solution.removeDuplicates(s1)); // Output should be "ca"
+        
+       
+    }
+}
 
 
 // Java program to check if two strings are anagrams
