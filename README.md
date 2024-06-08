@@ -993,6 +993,42 @@ public class arrayRotationToLeft {
 
  // Remove All Adjacent Duplicates In String
 
+by iterating through the string and removing adjacent duplicates directly
+---------------------------------------------------
+
+
+public class RemoveAdjacentDuplicates {
+    public String removeDuplicates(String s) {
+        StringBuilder sb = new StringBuilder();
+        
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            
+            // If the current character is equal to the next one, skip both characters
+            if (i < s.length() - 1 && s.charAt(i + 1) == c) {
+                i++;
+            } else {
+                sb.append(c);
+            }
+        }
+        
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        RemoveAdjacentDuplicates solution = new RemoveAdjacentDuplicates();
+        
+        // Test cases
+        String s1 = "aabbaacca";
+        System.out.println("Input: " + s1);
+        System.out.println("Output: " + solution.removeDuplicates(s1)); // Output should be "ca"
+        
+        
+    }
+}
+
+using stack
+---------------
 package com.java8;
 
 import java.util.Stack;
