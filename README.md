@@ -1065,6 +1065,35 @@ public class RemoveAdjacentDuplicates {
     }
 }
 
+//  Write a Java program that counts and displays the occurrences of duplicate characters in a given string. 
+   A character is considered a duplicate if it appears more than once in the string. ?
+
+package com.duplicates;
+import java.util.HashMap;
+import java.util.Map;
+
+public class duplicatesCount {
+    public static void main(String[] args) {
+        String str = "aabaabcd";
+        Map<Character, Integer> charCountMap = new HashMap<>();
+
+        // Count occurrences of each character
+        for (char c : str.toCharArray()) {
+            charCountMap.put(c, charCountMap.getOrDefault(c, 0) + 1);
+        }
+
+        // Print duplicate characters and their counts
+        System.out.println("Duplicates:");
+        for (Map.Entry<Character, Integer> entry : charCountMap.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.println(entry.getKey() + "=" + entry.getValue());
+            }
+        }
+    }
+}
+
+
+
 
 // Java program to check if two strings are anagrams
 //  Java program to find the first and last index of a given integer in an array?
