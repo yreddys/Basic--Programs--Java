@@ -36,6 +36,22 @@ public class Main {
 
 
 
+// palindrome of number using java 8
+
+
+
+import java.util.stream.IntStream;
+
+public class Main {
+    public static void main(String[] args) {
+        int numberPalindrome = 123;
+        String str = String.valueOf(numberPalindrome);
+        boolean isPalindrome = IntStream.range(0, str.length() / 2)
+                .allMatch(i -> str.charAt(i) == str.charAt(str.length() - i - 1));
+        System.out.println("Is palindrome: " + isPalindrome);
+    }
+}
+
 
 
 
