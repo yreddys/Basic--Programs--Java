@@ -1,1 +1,23 @@
+// 1. String Palindrome using java 8
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class Java8 {
+    public static void main(String[] args) {
+        List<String> words = Arrays.asList("radar", "hello", "deified");
+        
+        Map<Boolean, List<String>> palindromeMap = words.stream()
+                .collect(Collectors.partitioningBy(
+                        s -> s.equals(new StringBuilder(s).reverse().toString())));
+        
+        List<String> palindromes = palindromeMap.get(true);
+        List<String> nonPalindromes = palindromeMap.get(false);
+        
+        System.out.println("Palindromes: " + palindromes);
+        System.out.println("Non-Palindromes: " + nonPalindromes);
+    }
+}
 
