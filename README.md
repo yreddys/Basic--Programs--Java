@@ -34,6 +34,29 @@ public class reverseNumString {
     }
 }
 
+
+// NumberPalindrome  
+
+public class NumberPalindrome {
+    public static void main(String[] args) {
+        int num = 121;
+        int originalNum = num;
+        int reverse = 0;
+        
+        while (num > 0) {
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num = num / 10;
+        }
+        
+        if (originalNum == reverse) {
+            System.out.println("The number is a palindrome.");
+        } else {
+            System.out.println("The number is not a palindrome.");
+        }
+    }
+}
+
   //  Palindrome for String  
 
 public class StringPalindrome {
