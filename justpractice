@@ -1,1 +1,44 @@
-justpractice
+package june15;
+
+import java.util.Comparator;
+
+public class StudentNameComparator implements Comparator<Student> {
+    @Override
+    public int compare(Student s1, Student s2) {
+        return s1.name.compareTo(s2.name);
+    }
+}
+
+
+
+package june15;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class ListExample {
+    public static void main(String[] args) {
+        List<Student> li = new ArrayList<>();
+        li.add(new Student(90, "Reddy"));
+        li.add(new Student(10, "Reddy"));
+        li.add(new Student(20, "Hi"));
+
+        // Sort the list by age using the comparator
+        Collections.sort(li, new StudentAgeComparator());
+
+        System.out.println("Sorted by age:");
+        for (Student student : li) {
+            System.out.println(student);
+        }
+
+        // Sort the list by name using the comparator
+        Collections.sort(li, new StudentNameComparator());
+
+        System.out.println("Sorted by name:");
+        for (Student student : li) {
+            System.out.println(student);
+        }
+    }
+}
+
