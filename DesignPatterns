@@ -104,5 +104,6 @@ avoiding potential issues with threads caching the value of `instance`.
 - The double-checked locking pattern checks if the instance is null before acquiring the lock,
 which improves performance by avoiding synchronization once the instance has been initialized.
 
-
+FACTORY DESIGN PATTERN
+-----------------------
 
