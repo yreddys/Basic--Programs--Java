@@ -42,3 +42,53 @@ public class ListExample {
     }
 }
 
+Comparable
+==========
+
+package ju15;
+
+public class students implements Comparable<students> {
+	int id;
+	String name;
+	int age;
+
+	public students(int id, String name, int age) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+	}
+
+	@Override
+	public int compareTo(students o) {
+		if (age == o.age)
+			return 0;
+		else if (age > o.age) {
+			return 1;
+		} else
+			return -1;
+	}
+
+	public students() {
+	}
+}
+
+
+package ju15;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Client {
+	public static void main(String[] args) {
+		List<students> list = new ArrayList<>();
+		list.add(new students(1, "reddy", 20));
+		list.add(new students(2, "reddy", 20));
+		list.add(new students(3, "reddy", 20));
+//		Collections.sort(list, new students());
+		Collections.sort(list, new students());
+	}
+}
+
+
+
