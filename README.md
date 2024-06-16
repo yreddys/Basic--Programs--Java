@@ -1115,6 +1115,30 @@ public class duplicatesCount {
     }
 }
 
+// To swap words in an array based on their length in Java
+
+public class SwappingBasedOnLength {
+    public static void main(String[] args) {
+        String[] str = { "Reddy", "i", "am", "sekhar" };
+        String temp;
+
+        for (int i = 0; i < str.length; i++) {
+            for (int j = i + 1; j < str.length; j++) {
+                if (str[i].length() > str[j].length()) {
+                    temp = str[i];
+                    str[i] = str[j];
+                    str[j] = temp;
+                }
+            }
+        }
+
+       
+        for (String s : str) {
+            System.out.println(s);
+        }
+    }
+}
+
 
 
 
