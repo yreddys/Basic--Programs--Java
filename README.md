@@ -1122,7 +1122,7 @@ public class duplicatesCount {
 //  Java program to find the first and last index of a given integer in an array?
 //  Program to  find the common values between two lists using Java 8 streams ?
 // Valid Parenthesis problem in java
-
+// pyramid problem
 // Can you  write a program that counts the number of zeros in an array?
 Input : {0, 2, 0, 4, 0, 6, 0}
 Output: 4
