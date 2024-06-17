@@ -1139,10 +1139,36 @@ public class SwappingBasedOnLength {
     }
 }
 
-
-
-
+// ANAGRAM
+============
 // Java program to check if two strings are anagrams
+
+public class Anagram {
+	public static boolean areAnagrams(String s, String s2) {
+		if (s.length() != s2.length()) {
+			return false;
+		}
+		char[] c = s.toCharArray();
+		char[] c1 = s2.toCharArray();
+		Arrays.sort(c);
+		Arrays.sort(c1);
+		return Arrays.equals(c1, c);
+	}
+
+	public static void main(String[] args) {
+		String str1 = "listen";
+		String str2 = "silent";
+		if (areAnagrams(str1, str2)) {
+			System.out.println(str1 + " and " + str2 + " are anagrams.");
+		} else {
+			System.out.println(str1 + " and " + str2 + " are not anagrams.");
+		}
+	}
+}
+
+
+
+
 //  Java program to find the first and last index of a given integer in an array?
 //  Program to  find the common values between two lists using Java 8 streams ?
 // Valid Parenthesis problem in java
