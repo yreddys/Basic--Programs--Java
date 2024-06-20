@@ -49,10 +49,21 @@ WHERE year_month LIKE '2021%'
 
 To find all student IDs who enrolled in more than one course from the given student table,
 
+
+// SQL Query to Find the Highest Salary of Each Department
+
 SELECT id
 FROM student_table
 GROUP BY id
 HAVING COUNT(DISTINCT course) > 1
 
+SELECT department, MAX(sal) AS second_highest_salary
+FROM employee
+WHERE sal < (
+    SELECT MAX(sal)
+    FROM employee AS e1
+    WHERE e1.department = employee.department
+)
+GROUP BY department;
 
 
