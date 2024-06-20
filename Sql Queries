@@ -40,17 +40,14 @@ call employee();
 
 
 
-To find all student names who enrolled in the year 2021 from the given student table
+// To find all student names who enrolled in the year 2021 from the given student table
 
 SELECT DISTINCT name
 FROM student_table
 WHERE year_month LIKE '2021%'
 
 
-To find all student IDs who enrolled in more than one course from the given student table,
-
-
-
+// To find all student IDs who enrolled in more than one course from the given student table,
 
 SELECT id
 FROM student_table
