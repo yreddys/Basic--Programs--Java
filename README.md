@@ -1166,6 +1166,42 @@ public class Anagram {
 	}
 }
 
+//  To find triplets in the array that sum up to a given target
+// Print all triplets with given sum
+
+import java.util.Arrays;
+
+public class TripletSum {
+	public static void findTriplets(int[] arr, int targetSum) {
+		Arrays.sort(arr);
+		int n = arr.length;
+
+		for (int i = 0; i < n - 2; i++) {
+			int left = i + 1;
+			int right = n - 1;
+
+			while (left < right) {
+				int currentSum = arr[i] + arr[left] + arr[right];
+
+				if (currentSum == targetSum) {
+					System.out.println("Triplet: " + arr[i] + ", " + arr[left] + ", " + arr[right]);
+					left++;
+					right--;
+				} else if (currentSum < targetSum) {
+					left++;
+				} else {
+					right--;
+				}
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		int[] arr = { 1, 2, 3, 6, 7, 8, 9, 4, 5 };
+		int targetSum = 9;
+		findTriplets(arr, targetSum);
+	}
+}
 
 
 
