@@ -95,3 +95,13 @@ numbers.stream().filter(n->!hs.add(n)).forEach(System.out::println);
 List<Integer> numbers=Arrays.asList(10,20,25,27,30);
 numbers.stream().sorted(Colections.reverseOrder()).forEach(System.out::println);
 
+
+//   Department wise Highest salary
+
+		Map<String, Optional<Employee>> highestSalariesByDept = list.stream().collect(Collectors
+				.groupingBy(Employee::getDepartment, Collectors.maxBy(Comparator.comparingInt(Employee::getSalary))));
+
+		// Print the employees with the highest salary in each department
+		highestSalariesByDept.forEach((department, employee) -> System.out
+				.println("Department: " + department + ", Employee with highest salary: " + employee.orElse(null)));
+	
