@@ -992,6 +992,7 @@ public class movingZeros {
 }
 
 // Array Rotation to left In java
+// Array Rotation to right In java
 
 package com.array;
 
