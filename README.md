@@ -994,6 +994,8 @@ public class movingZeros {
 // Array Rotation to left In java
 
 
+
+
 package com.array;
 
 public class arrayRotationToLeft {
@@ -1016,6 +1018,36 @@ public class arrayRotationToLeft {
 }
 
 // Array Rotation to right In java
+
+
+package com.practice;
+
+
+
+public class ArrayRotationToRight {
+    public static void main(String[] args) {
+        int a[] = { 1, 2, 3, 4, 5, 6 };
+        int rotations = 2; // Number of positions to rotate to the right
+
+        // Perform rotations
+        for (int i = 0; i < rotations; i++) {
+            int end = a[a.length - 1]; // Store the last element
+
+            // Shift elements to the right
+            for (int j = a.length - 1; j > 0; j--) {
+                a[j] = a[j - 1];
+            }
+
+            a[0] = end; // Place the last element at the beginning
+        }
+
+        // Print the rotated array
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+    }
+}
+
 
 
  // Remove All Adjacent Duplicates In String
