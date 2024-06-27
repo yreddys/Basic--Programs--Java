@@ -992,7 +992,7 @@ public class movingZeros {
 }
 
 // Array Rotation to left In java
-// Array Rotation to right In java
+
 
 package com.array;
 
@@ -1014,6 +1014,9 @@ public class arrayRotationToLeft {
 		}
 	}
 }
+
+// Array Rotation to right In java
+
 
  // Remove All Adjacent Duplicates In String
 
