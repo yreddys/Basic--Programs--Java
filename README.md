@@ -1246,7 +1246,7 @@ public class TripletSum {
 }
 
 // Write a Java program to count consecutive occurrences of each character in a given string
-and print each character along with its count.
+// and print each character along with its count.
 
 
 package com.practice;
