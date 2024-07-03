@@ -1245,6 +1245,43 @@ public class TripletSum {
 	}
 }
 
+// Write a Java program to count consecutive occurrences of each character in a given string
+and print each character along with its count.
+
+
+package com.practice;
+public class ContinuousCharacterCounter {
+    public static void main(String[] args) {
+        String input = "aabbbccabbdc";
+        countContinuousCharacters(input);
+    }
+
+    public static void countContinuousCharacters(String input) {
+        if (input == null || input.isEmpty()) {
+            System.out.println("Input string is empty");
+            return;
+        }
+
+        char[] chars = input.toCharArray();
+        char currentChar = chars[0];
+        int count = 1;
+
+        for (int i = 1; i < chars.length; i++) {
+            if (chars[i] == currentChar) {
+                count++;
+            } else {
+                System.out.println(currentChar + "="+ count );
+                currentChar = chars[i];
+                count = 1;
+            }
+        }
+        
+        // Print the last character and its count
+        System.out.println(currentChar + " = " + count );
+    }
+}
+
+
 
 
 //  Java program to find the first and last index of a given integer in an array?
