@@ -132,7 +132,13 @@ public class Hello {
     }
 }
 
-// 4. program to find MaxConsecutiveRepetition in String?
+// 4. program to find Occurances in String?
+
+String input = "aaabbbbcccccddd";
+o/p:  a=3
+b=4
+c=5
+d=3
 
 package com.arrays;
 
