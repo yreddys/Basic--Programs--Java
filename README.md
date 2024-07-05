@@ -1281,6 +1281,30 @@ public class ContinuousCharacterCounter {
     }
 }
 
+To  Write java program to find highest number in array with single loop
+========================================================================
+
+package com.practice;
+
+
+public class FindHighestNumber {
+    public static void main(String[] args) {
+        int[] array = { 3, 8, 1, 6, 2, 9, 4, 5 };
+
+        // Initialize max with the first element of the array
+        int max = array[0];
+
+        // Iterate through the array to find the maximum number
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+
+        // Print the highest number found
+        System.out.println("Highest number in the array: " + max);
+    }
+}
 
 
 
