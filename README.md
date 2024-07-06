@@ -161,6 +161,33 @@ public class MaxConsecutiveRepetition {
     }
 }
 
+O/P:
+
+1 occurs 3 times.
+2 occurs 3 times.
+3 occurs 1 times.
+
+
+package com.practice;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Occurrences {
+    public static void main(String[] args) {
+        int[] a = { 1, 2, 1, 2, 3, 1, 2 };
+        Map<Integer, Integer> map = new HashMap<>();
+        
+        for (int i = 0; i < a.length; i++) {
+            map.put(a[i], map.getOrDefault(a[i], 0) + 1);
+        }
+        
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " occurs " + entry.getValue() + " times.");
+        }
+    }
+}
+
 // 5. Reverse a String 
 
 String str = "Hello";
