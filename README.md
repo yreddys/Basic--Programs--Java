@@ -1367,11 +1367,36 @@ public class PyramidDemo {
 }
 
 
+ // program to print the following ?
+
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+
+package com.practice;
+
+public class PatternDemo1 {
+	public static void main(String[] args) {
+		int n = 5, num = 1;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j <= i; j++) {
+				System.out.print(num + " ");
+				num = num + 1;
+			}
+			System.out.println();
+		}
+
+	}
+}
+
+
 
 //  Java program to find the first and last index of a given integer in an array?
 //  Program to  find the common values between two lists using Java 8 streams ?
 // Valid Parenthesis problem in java
-// pyramid problem
+
 // Can you  write a program that counts the number of zeros in an array?
 Input : {0, 2, 0, 4, 0, 6, 0}
 Output: 4
