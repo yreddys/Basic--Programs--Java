@@ -53,8 +53,23 @@ public class Main {
 }
 
 
+// To convert odd numbers to even using Java 8
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+        List<Integer> updatedList = list.stream()
+                                        .map(n -> (n % 2 != 0) ? n + 1 : n)  // Increment odd numbers by 1
+                                        .collect(Collectors.toList());
+
+        System.out.println(updatedList);  // Output: [2, 2, 4, 4, 6, 6]
+    }
+}
 
 
 
