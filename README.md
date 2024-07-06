@@ -1390,13 +1390,51 @@ public class PatternDemo1 {
 
 	}
 }
+//  Valid Parenthesis problem in java
 
+package com.practice;
+
+import java.util.Stack;
+
+public class ValidParenthesis {
+    public static boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char c : s.toCharArray()) {
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c);
+            } else if (c == ')' && !stack.isEmpty() && stack.peek() == '(') {
+                stack.pop();
+            } else if (c == '}' && !stack.isEmpty() && stack.peek() == '{') {
+                stack.pop();
+            } else if (c == ']' && !stack.isEmpty() && stack.peek() == '[') {
+                stack.pop();
+            } else {
+                return false;
+            }
+        }
+
+        return stack.isEmpty();
+    }
+
+    public static void main(String[] args) {
+        String test1 = "()";
+        String test2 = "()[]{}";
+        String test3 = "(]";
+        String test4 = "([)]";
+        String test5 = "{[]}";
+
+        System.out.println(isValid(test1)); // true
+        System.out.println(isValid(test2)); // true
+        System.out.println(isValid(test3)); // false
+        System.out.println(isValid(test4)); // false
+        System.out.println(isValid(test5)); // true
+    }
+}
 
 
 //  Java program to find the first and last index of a given integer in an array?
 //  Program to  find the common values between two lists using Java 8 streams ?
-// Valid Parenthesis problem in java
-
 // Can you  write a program that counts the number of zeros in an array?
 Input : {0, 2, 0, 4, 0, 6, 0}
 Output: 4
