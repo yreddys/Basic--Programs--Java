@@ -1131,7 +1131,7 @@ public class RemoveAdjacentDuplicates {
 }
 
 //  Write a Java program that counts and displays the occurrences of duplicate characters in a given string. 
-   A character is considered a duplicate if it appears more than once in the string. ?
+//  A character is considered a duplicate if it appears more than once in the string. ?
 
 package com.duplicates;
 import java.util.HashMap;
@@ -1281,7 +1281,7 @@ public class ContinuousCharacterCounter {
     }
 }
 
-To  Write java program to find highest number in array with single loop
+// To  Write java program to find highest number in array with single loop
 ========================================================================
 
 package com.practice;
