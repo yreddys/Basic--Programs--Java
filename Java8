@@ -105,3 +105,12 @@ numbers.stream().sorted(Colections.reverseOrder()).forEach(System.out::println);
 		highestSalariesByDept.forEach((department, employee) -> System.out
 				.println("Department: " + department + ", Employee with highest salary: " + employee.orElse(null)));
 	
+// Department wise secondHighest
+
+
+Map<String, Optional<Employee>> secondHighestByDepartWise = employee.stream()
+				.collect(Collectors.groupingBy(Employee::getAddress,
+						Collectors.collectingAndThen(Collectors.toList(), list -> list.stream()
+								.sorted(Comparator.comparingInt(Employee::getSalary).reversed()).skip(1).findFirst())));
+
+		secondHighestByAddress.forEach((address, emp) -> System.out.println(address + ": " + emp.orElse(null)));
