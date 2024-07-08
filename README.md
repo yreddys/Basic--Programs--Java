@@ -1458,6 +1458,28 @@ public class ValidParenthesis {
         System.out.println(isValid(test5)); // true
     }
 }
+// finding the common preifx from list of Strings
+
+package com.july8.java8;
+
+public class CommonPrefix {
+    public static String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0) return "";
+        String prefix = strs[0];
+        for (int i = 1; i < strs.length; i++) {
+            while (strs[i].indexOf(prefix) != 0) {
+                prefix = prefix.substring(0, prefix.length() - 1);
+                if (prefix.isEmpty()) return "";
+            }
+        }
+        return prefix;
+    }
+
+    public static void main(String[] args) {
+        String[] strs = {"flower", "flow", "flight"};
+        System.out.println("The longest common prefix is: " + longestCommonPrefix(strs));
+    }
+}
 
 
 //  Java program to find the first and last index of a given integer in an array?
