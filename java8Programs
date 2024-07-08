@@ -98,6 +98,26 @@ public class FirstNonRepeatedCharacter {
     }
 }
 
+// java8 program to find the frequency of character
+
+package com.java8;
+
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class frequencyOfChar {
+	public static void main(String[] args) {
+
+		String inputString = "reedysekahrreddysekahr";
+
+		Map<Character, Long> frequencyMap = inputString.chars().mapToObj(c -> (char) c)
+				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+		System.out.println("Frequency of each character:");
+		frequencyMap.forEach((character, frequency) -> System.out.println(character + ": " + frequency));
+	}
+}
 
 // find the duplicates using stream ?
 
