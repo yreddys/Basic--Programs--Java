@@ -557,28 +557,6 @@ O/P:
 1,4
 2,3
 
-package com.variables;
-
-import java.util.Arrays;
-import java.util.Set;
-import java.util.stream.Collectors;
-
-public class pairs {
-	public static void main(String[] args) {
-		 int[] numbers = {0, 4, 5, 6, 1, 2, 3}; 
-	        int targetSum = 5; 
-
-	        findPairsWithSum(numbers, targetSum);
-	    }
-
-	    public static void findPairsWithSum(int[] numbers, int targetSum) {
-	        Set<Integer> set = Arrays.stream(numbers).boxed().collect(Collectors.toSet());
-
-	        Arrays.stream(numbers)
-	                .filter(num -> set.contains(targetSum - num) && num <= targetSum - num)
-	                .forEach(num -> System.out.println(num + "," + (targetSum -num)));
-	}
-}
 
 public class Main {
     public static void main(String[] args) {
