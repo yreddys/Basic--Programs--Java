@@ -119,6 +119,30 @@ public class frequencyOfChar {
 	}
 }
 
+
+// java8 program to find the frequency of words
+
+O/P:
+red=2
+green=1
+blue=3
+
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
+public class WordOccurrences {
+    public static void main(String[] args) {
+        String s = "red green blue red blue blue";
+        Map<String, Long> occurrences = Arrays.stream(s.split(" "))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        occurrences.forEach((word, count) -> System.out.println(word + "=" + count));
+    }
+}
+
+
+
 to find pairs of integers in an array that sum up to a given target sum.?
 
 I/P: {0, 4, 5, 6, 1, 2, 3};
