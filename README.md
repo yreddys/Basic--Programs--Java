@@ -1386,20 +1386,27 @@ public class ValidParenthesis {
     public static boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
 
+        // Iterate through each character in the string
         for (char c : s.toCharArray()) {
+            // Push opening parentheses onto the stack
             if (c == '(' || c == '{' || c == '[') {
                 stack.push(c);
-            } else if (c == ')' && !stack.isEmpty() && stack.peek() == '(') {
+            } 
+            // Match and pop corresponding closing parentheses
+            else if (c == ')' && !stack.isEmpty() && stack.peek() == '(') {
                 stack.pop();
             } else if (c == '}' && !stack.isEmpty() && stack.peek() == '{') {
                 stack.pop();
             } else if (c == ']' && !stack.isEmpty() && stack.peek() == '[') {
                 stack.pop();
-            } else {
+            } 
+            // Return false if there's a mismatch or stack is empty when a closing parenthesis is encountered
+            else {
                 return false;
             }
         }
 
+        // Ensure no unmatched opening parentheses remain in the stack
         return stack.isEmpty();
     }
 
@@ -1417,6 +1424,7 @@ public class ValidParenthesis {
         System.out.println(isValid(test5)); // true
     }
 }
+
 // finding the common preifx from list of Strings
 
 package com.july8.java8;
