@@ -1,6 +1,6 @@
 package com.july8.v11;
 
-
+// palindrome program for String
 public class PalindromeUsingRecursion {
 
  
@@ -31,3 +31,28 @@ public class PalindromeUsingRecursion {
     }
 }
 
+// Palindrome program for number
+
+
+package com.july8.v11;
+
+public class PalindromeUsingRecusrion {
+	public static boolean isPalindrome(int i, int j, String str) {
+		if (i >= j) {
+			return true;
+		}
+		if (str.charAt(i) != str.charAt(j)) {
+			return false;
+		}
+		i++;
+		j--;
+		return isPalindrome(i, j, str);
+	}
+
+	public static void main(String[] args) {
+		int a = 121;
+		String str = String.valueOf(a);
+		int j = str.length() - 1;
+		System.out.println(isPalindrome(0, j, str));
+	}
+}
