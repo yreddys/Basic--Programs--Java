@@ -27,3 +27,66 @@ public class MissingNumberBruite {
 	}
 }
 
+
+// Program to find the MissingNumber (Optimal Solution )
+
+package practice;
+
+public class MissingNumberOptimal {
+	
+	public static int missingNumber(int arr[],int N) {
+		
+		int sum1 = N*(N+1)/2;
+		int sum2 = 0;
+		for(int i=0;i<arr.length;i++) {
+			sum2 = sum2+arr[i];
+		}
+		int missingNumber = sum1-sum2;
+		
+		return missingNumber;
+	}
+	public static void main(String[] args) {
+		int arr[] = {1,4,5,2};
+		int N = 5;
+		int ans = missingNumber(arr,N);
+		System.out.println(ans);
+	}
+
+}
+
+
+//  Program to find the MissingNumber(Using XOR)
+
+// package practice;
+
+//1^1 = 0
+//0^1 = 1
+//0^0 =0
+
+//{1,2,3,4,5} -->
+//{1,4,5,2} -->
+// 3
+
+
+
+public class MissingNumbersOptimal {
+	
+	public static int missingNumber(int arr[],int N) {
+		int xor1 = 0;
+		int xor2 = 0;
+		for(int i=0;i<N-1;i++) {
+			xor2 = xor2^arr[i];
+			xor1 = xor1^(i+1);
+		}
+		xor1 = xor1^N;
+		
+		return xor1^xor2;
+	}
+	public static void main(String[] args) {
+		int arr[] = {1,4,5,2};
+		int N = 5;
+		int ans = missingNumber(arr,N);
+		System.out.println(ans);
+	}
+
+}
