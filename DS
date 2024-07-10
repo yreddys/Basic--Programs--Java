@@ -1,1 +1,29 @@
+1. Program to find the MissingNumber
+
+public class MissingNumberBruite {
+
+	// {1,2,5,4} --> size 4, index 3,N+1
+
+	public static int missingNumber(int arr[], int N) {
+		for (int i = 1; i <= N; i++) {
+			int flag = 0;
+			for (int j = 0; j < N - 1; j++) {
+				if (arr[j] == i) {
+					flag = 1;
+					break;
+				}
+			}
+			if (flag == 0)
+				return i;
+		}
+		return -1;
+	}
+
+	public static void main(String[] args) {
+		int arr[] = { 1, 4, 5, 2 };
+		int N = 5;
+		int ans = missingNumber(arr, N);
+		System.out.println(ans);
+	}
+}
 
