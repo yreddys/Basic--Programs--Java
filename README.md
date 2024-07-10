@@ -1450,6 +1450,36 @@ public class CommonPrefix {
 
 
 //  Java program to find the first and last index of a given integer in an array?
+
+package com.july8.v10;
+
+import java.util.Arrays;
+
+public class FirstAndLastIndex {
+	public static void main(String[] args) {
+		int a[] = { 1, 2, 3, 4, 4, 5, 6 };
+		int target = 4;
+		System.out.println(Arrays.toString(searchRange(a, target)));
+	}
+
+	static int[] searchRange(int num[], int target) {
+		int[] arr = new int[2];
+		arr[0] = arr[1] = -1;
+		for (int i = 0; i < num.length - 1; i++) {
+			if (num[i] == target) {
+				arr[0] = i;
+				while (i < num.length && num[i + 1] == target) {
+					i++;
+					arr[1] = i;
+					break;
+				}
+
+			}
+		}
+		return arr;
+	}
+}
+
 //  Program to  find the common values between two lists using Java 8 streams ?
 // Can you  write a program that counts the number of zeros in an array?
 Input : {0, 2, 0, 4, 0, 6, 0}
