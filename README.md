@@ -1425,28 +1425,33 @@ public class ValidParenthesis {
     }
 }
 
-// finding the common preifx from list of Strings
+// finding the Longest common prefix from list of Strings
+import java.util.Arrays;
 
-package com.july8.java8;
+public class LongestCommonPrefix {
+	public static void main(String[] args) {
+		String[] strs = { "flower", "flow", "flight" };
+		System.out.println(longestCommonPrefix(strs));
+	}
 
-public class CommonPrefix {
-    public static String longestCommonPrefix(String[] strs) {
-        if (strs == null || strs.length == 0) return "";
-        String prefix = strs[0];
-        for (int i = 1; i < strs.length; i++) {
-            while (strs[i].indexOf(prefix) != 0) {
-                prefix = prefix.substring(0, prefix.length() - 1);
-                if (prefix.isEmpty()) return "";
-            }
-        }
-        return prefix;
-    }
+	public static String longestCommonPrefix(String[] strs) {
+		Arrays.sort(strs);
+		String str1 = strs[0];
+		String str2 = strs[strs.length - 1];
+		int index = 0;
+		while (index < str1.length()) {
+			if (str1.charAt(index) == str2.charAt(index)) {
+				index++;
 
-    public static void main(String[] args) {
-        String[] strs = {"flower", "flow", "flight"};
-        System.out.println("The longest common prefix is: " + longestCommonPrefix(strs));
-    }
+			} else {
+				break;
+			}
+
+		}
+		return index == 0 ? "" : str1.substring(0, index);
+	}
 }
+
 
 
 //  Java program to find the first and last index of a given integer in an array?
