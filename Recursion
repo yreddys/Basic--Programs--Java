@@ -56,3 +56,31 @@ public class PalindromeUsingRecusrion {
 		System.out.println(isPalindrome(0, j, str));
 	}
 }
+
+// FibanocciRecursion
+
+
+package com.july8.v11;
+
+
+public class FibanocciRecursion {
+
+   
+    public static void main(String[] args) {
+        int terms = 7;  
+  for (int i = 1; i <= terms; i++) {
+           System.out.print(fibo(i) + " ");
+        }
+    }
+
+  
+    static int fibo(int n) {
+        // Base cases: the first and second Fibonacci numbers are both 1
+        if (n == 1 || n == 2) {
+            return 1;
+        }
+
+        // Recursive case: Fibonacci number is the sum of the two preceding ones
+        return fibo(n - 1) + fibo(n - 2);
+    }
+}
