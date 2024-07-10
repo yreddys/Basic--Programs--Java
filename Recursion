@@ -14,9 +14,9 @@ public class PalindromeUsingRecursion {
             return false;
         }
         // Increment the starting index
-        i = i + 1;
+        i++;
         // Decrement the ending index
-        j = j - 1;
+        j --;
         // Recursive call to check the next set of characters
         return isPalindrome(i, j, str);
     }
