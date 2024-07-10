@@ -1484,6 +1484,30 @@ public class FirstAndLastIndex {
 		return arr;
 	}
 }
+// Missing Number from Array
+
+
+package com.july8.v10;
+
+public class MissingNumber{
+	public static int missingNumber(int a[], int n) {
+		int sum1 = n * (n + 1) / 2;
+		int sum2 = 0;
+		for (int i = 0; i < a.length; i++) {
+			sum2 = sum2 + a[i];
+		}
+		int missingNumber = sum1-sum2;
+		return missingNumber;
+	}
+
+	public static void main(String[] args) {
+		int arr[] = { 1, 4, 5, 2 };
+		int N = 5;
+		int ans = missingNumber(arr, N);
+		System.out.println(ans);
+
+	}
+}
 
 //  Program to  find the common values between two lists using Java 8 streams ?
 // Can you  write a program that counts the number of zeros in an array?
