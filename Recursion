@@ -1,1 +1,33 @@
+package com.july8.v11;
+
+
+public class PalindromeUsingRecursion {
+
+ 
+    public static boolean isPalindrome(int i, int j, String str) {
+        // Base case: If the starting index is greater than or equal to the ending index, return true
+        if (i >= j) {
+            return true;
+        }
+        // If the characters at the current indices are not equal, return false
+        if (str.charAt(i) != str.charAt(j)) {
+            return false;
+        }
+        // Increment the starting index
+        i = i + 1;
+        // Decrement the ending index
+        j = j - 1;
+        // Recursive call to check the next set of characters
+        return isPalindrome(i, j, str);
+    }
+
+    public static void main(String[] args) {
+      
+        String str = "abc";
+        
+        int j = str.length() - 1;
+       
+        System.out.println(isPalindrome(0, j, str));
+    }
+}
 
