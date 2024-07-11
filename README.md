@@ -1508,7 +1508,7 @@ public class MissingNumber{
 
 	}
 }
-
+// a Java program that reverses a portion of an array based on given start and end indices ?
 //  Program to  find the common values between two lists using Java 8 streams ?
 // Can you  write a program that counts the number of zeros in an array?
 Input : {0, 2, 0, 4, 0, 6, 0}
