@@ -1531,7 +1531,7 @@ public class ArrayReverseBasedIndexPosition {
 	}
 }
 
-
+//  print a matrix in a snake pattern in Java
 //  Program to  find the common values between two lists using Java 8 streams ?
 // Can you  write a program that counts the number of zeros in an array?
 Input : {0, 2, 0, 4, 0, 6, 0}
