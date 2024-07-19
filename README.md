@@ -1532,6 +1532,34 @@ public class ArrayReverseBasedIndexPosition {
 }
 
 //  print a matrix in a snake pattern in Java
+
+package com.july18;
+
+public class SnakePattern {
+	public static void printMatrixInSnakePattern(int[][] matrix) {
+		for (int i = 0; i < matrix.length; i++) {
+			if (i % 2 == 0) {
+				// Even index row: left to right
+				for (int j = 0; j < matrix[i].length; j++) {
+					System.out.print(matrix[i][j] + " ");
+				}
+			} else {
+				// Odd index row: right to left
+				for (int j = matrix[i].length - 1; j >= 0; j--) {
+					System.out.print(matrix[i][j] + " ");
+				}
+			}
+			System.out.println(); // Move to the next line after each row
+		}
+	}
+
+	public static void main(String[] args) {
+		int[][] matrix = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
+		printMatrixInSnakePattern(matrix);
+	}
+}
+
+
 //  Program to  find the common values between two lists using Java 8 streams ?
 // Can you  write a program that counts the number of zeros in an array?
 Input : {0, 2, 0, 4, 0, 6, 0}
