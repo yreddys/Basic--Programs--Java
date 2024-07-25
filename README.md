@@ -1559,7 +1559,8 @@ public class SnakePattern {
 	}
 }
 
-
+// Longest Palindrome
+// Common Characters 
 //  Program to  find the common values between two lists using Java 8 streams ?
 // Can you  write a program that counts the number of zeros in an array?
 Input : {0, 2, 0, 4, 0, 6, 0}
