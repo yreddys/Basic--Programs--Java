@@ -1559,6 +1559,39 @@ public class SnakePattern {
 	}
 }
 
+
+// Swapping the Array
+
+public class SwapElements {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+
+        System.out.println("Original array: " + Arrays.toString(array));
+
+        // Perform swapping with two pointers
+        swapArrayElements(array);
+
+        System.out.println("Array after swapping: " + Arrays.toString(array));
+    }
+
+    public static void swapArrayElements(int[] array) {
+        int left = 0;
+        int right = array.length - 1;
+
+        while (left < right) {
+            // Swap the elements at the left and right pointers
+            int temp = array[left];
+            array[left] = array[right];
+            array[right] = temp;
+
+            // Move the pointers towards the center
+            left++;
+            right--;
+        }
+    }
+}
+
+
 // Longest Palindrome
 // Common Characters 
 //  Program to  find the common values between two lists using Java 8 streams ?
