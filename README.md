@@ -1,6 +1,34 @@
 
 
 ```java
+
+https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/description/
+
+public class ReplaceGreatestElement {
+	public static void main(String[] args) {
+		int s[] = { 17, 18, 5, 4, 6, 1 };
+		int n = s.length;
+		int result[] = new int[n];
+		int max = -1;
+		for (int i = n - 1; i >= 0; i--) {
+			result[i] = max;
+			max = Math.max(max, s[i]);
+		}
+		for (int i = 0; i < result.length ; i++) {
+			System.out.print(result[i]+" ");
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
 // 1. Reverse a number / Palindrome
 
 package com.numberss;
