@@ -1,6 +1,7 @@
-75. Sort Colors
+```java
 
-import java.util.Arrays;
+
+75. Sort Colors
 
 public class BasicSortArray {
     public static void sortArray(int[] arr) {
