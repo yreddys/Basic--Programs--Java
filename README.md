@@ -1,3 +1,48 @@
+75. Sort Colors
+
+import java.util.Arrays;
+
+public class BasicSortArray {
+    public static void sortArray(int[] arr) {
+        // Count the occurrences of 0, 1, and 2
+        int count0 = 0, count1 = 0, count2 = 0;
+
+        for (int num : arr) {
+            if (num == 0) {
+                count0++;
+            } else if (num == 1) {
+                count1++;
+            } else if (num == 2) {
+                count2++;
+            }
+        }
+
+        // Overwrite the array with 0s, then 1s, then 2s
+        int index = 0;
+
+        // Add all 0s
+        for (int i = 0; i < count0; i++) {
+            arr[index++] = 0;
+        }
+
+        // Add all 1s
+        for (int i = 0; i < count1; i++) {
+            arr[index++] = 1;
+        }
+
+        // Add all 2s
+        for (int i = 0; i < count2; i++) {
+            arr[index++] = 2;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {2, 0, 1, 2, 0, 1, 0};
+        System.out.println("Before Sorting: " + Arrays.toString(arr));
+        sortArray(arr);
+        System.out.println("After Sorting: " + Arrays.toString(arr));
+    }
+}
 
 
 ```java
