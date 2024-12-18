@@ -1,4 +1,30 @@
 ```java
+
+// Right Rotation 
+// a[i+1]=a[i]
+public class rightRotate {
+	public static int[] rotate(int a[]) {
+		int n = a.length;
+		int i, j;
+		int temp[] = new int[n];
+		for (i = 0; i < n-1; i++) {
+			temp[i+1] = a[i];
+		}
+		
+		temp[0] = a[n-1];
+		return temp;
+
+	}
+
+	public static void main(String[] args) {
+		int a[] = { 1, 2, 3, 4, 5 };
+		// 5,1,2,3,4
+		int[] result = rotate(a);
+		System.out.println(Arrays.toString(result));
+	}
+}
+
+
 // Second Largest Element
 
 public class SecondLargest {
