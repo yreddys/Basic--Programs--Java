@@ -1,5 +1,5 @@
 ```java
-
+Leetcode 189.
 // Right Rotation 
 // a[i+1]=a[i]
 public class rightRotate {
@@ -55,7 +55,7 @@ public class SecondLargest {
 }
 
 
-75. Sort Colors
+Leetcode 75. Sort Colors
 
 public class BasicSortArray {
     public static void sortArray(int[] arr) {
