@@ -1,4 +1,32 @@
 ```java
+// Second Largest Element
+
+public class SecondLargest {
+	public static int findSecondLargest(int a[]) {
+		int n = a.length;
+
+		int max = Integer.MIN_VALUE;
+		int secondLargest = Integer.MIN_VALUE;
+
+		for (int i = 0; i < n; i++) {
+			if (a[i] > max) {
+				secondLargest = max; 
+				max = a[i];
+			} else if (a[i] > secondLargest && a[i] != max) {
+				secondLargest = a[i]; 
+										
+			}
+		}
+
+		return secondLargest;
+	}
+
+	public static void main(String[] args) {
+		int a[] = { 1, 20, 30, 4, 25, 100, 200 };
+		int second = findSecondLargest(a);
+		System.out.println("Second Largest: " + second);
+	}
+}
 
 
 75. Sort Colors
