@@ -1,4 +1,40 @@
 ```java
+
+
+678. Valid Parenthesis String
+
+import java.util.Stack;
+
+public class ValidParenthesesBetter {
+    public static boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char c : s.toCharArray()) {
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c); // Push opening brackets onto the stack
+            } else {
+                if (stack.isEmpty()) return false; // No matching opening bracket
+
+                char top = stack.pop(); // Pop the last unmatched opening bracket
+
+                // Check if it matches the closing bracket
+                if ((c == ')' && top != '(') || 
+                    (c == '}' && top != '{') || 
+                    (c == ']' && top != '[')) {
+                    return false;
+                }
+            }
+        }
+        return stack.isEmpty(); // All brackets should be matched
+    }
+
+    public static void main(String[] args) {
+        String input = "({[]})";
+        System.out.println("Is valid: " + isValid(input)); // Expected output: true
+    }
+}
+
+
 Leetcode 189.
 // Right Rotation 
 // a[i+1]=a[i]
