@@ -1,4 +1,36 @@
 ```java
+1021. Remove Outermost Parentheses
+
+public class RemoveOutermostParentheses {
+    public String removeOuterParentheses(String s) {
+        StringBuilder result = new StringBuilder();
+        int balance = 0;
+
+        for (char c : s.toCharArray()) {
+            // Check the balance before appending characters
+            if (c == '(') {
+                if (balance > 0) {
+                    result.append(c);
+                }
+                balance++;
+            } else if (c == ')') {
+                balance--;
+                if (balance > 0) {
+                    result.append(c);
+                }
+            }
+        }
+        
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        RemoveOutermostParentheses solution = new RemoveOutermostParentheses();
+        String s = "(()())(())";
+        String result = solution.removeOuterParentheses(s);
+        System.out.println("Output: " + result);  // Output: "()()()"
+    }
+}
 
 
 678. Valid Parenthesis String
