@@ -17,6 +17,7 @@ public class Ismo {
             char charT = t.charAt(i);
 
             // Check if mappings are consistent
+            // characters have not yet been mapped.
             if (s1[charS] == 0 && t1[charT] == 0) {
                 // Create new mappings
                 s1[charS] = charT;
