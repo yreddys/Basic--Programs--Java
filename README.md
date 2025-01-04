@@ -1,4 +1,46 @@
 ```java
+205. Isomorphic Strings
+
+public class Ismo {
+    public static boolean ismorphics(String s, String t) {
+        // Length check
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        // Arrays to store mappings
+        int[] s1 = new int[256];
+        int[] t1 = new int[256];
+
+        for (int i = 0; i < s.length(); i++) {
+            char charS = s.charAt(i);
+            char charT = t.charAt(i);
+
+            // Check if mappings are consistent
+            if (s1[charS] == 0 && t1[charT] == 0) {
+                // Create new mappings
+                s1[charS] = charT;
+                t1[charT] = charS;
+            } else if (s1[charS] != charT || t1[charT] != charS) {
+                return false; // Mapping conflict
+            }
+        }
+
+        return true; // Strings are isomorphic
+    }
+
+    public static void main(String[] args) {
+        String s = "ABC";
+        String t = "DEF";
+
+        boolean result = ismorphics(s, t);
+        System.out.println( result);
+
+       
+    }
+}
+
+
 1021. Remove Outermost Parentheses
 
 public class RemoveOutermostParentheses {
