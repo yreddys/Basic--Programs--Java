@@ -1407,9 +1407,8 @@ public class SwappingBasedOnLength {
     }
 }
 
-// ANAGRAM
-============
-// Java program to check if two strings are anagrams
+
+242. Valid Anagram 
 
 public class Anagram {
 	public static boolean areAnagrams(String s, String s2) {
