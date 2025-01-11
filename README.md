@@ -2,6 +2,38 @@
 
 451. Sort Characters By Frequency 
 
+// SubArraysWithTarget
+
+public class SubArraysWithTarget {
+    public static void subArrays(int a[], int target) {
+        // Iterate through all possible starting points of subarrays
+        for (int i = 0; i < a.length; i++) {
+            int currentSum = 0;
+
+            // Iterate through all possible ending points for subarrays
+            for (int j = i; j < a.length; j++) {
+                currentSum += a[j];
+
+                // If the current sum equals the target, print the subarray
+                if (currentSum == target) {
+                    for (int k = i; k <= j; k++) {
+                        System.out.print(a[k] + " ");
+                    }
+                    System.out.println(); // Newline for the next subarray
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] a = {1, 2, 3, 4, 5, 6, 8};
+        int target = 3;
+
+        System.out.println("Subarrays with target sum " + target + ":");
+        subArrays(a, target);
+    }
+}
+
 // Generating SubArrays
 
 Brute 
