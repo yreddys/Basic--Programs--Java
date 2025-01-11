@@ -2,6 +2,32 @@
 
 451. Sort Characters By Frequency 
 
+// Generating SubArrays
+
+Brute 
+------
+
+public class SubArray {
+	public static void subArrays(int a[], int n) {
+		int i, j, k;
+		for (i = 0; i < n; i++) {
+			for (j = i; j < n; j++) {
+				for (k = i; k <= j; k++) {
+					System.out.print(a[k] + " ");
+				}
+				System.out.println();
+			}
+
+		}
+	}
+
+	public static void main(String[] args) {
+		int a[] = { 1, 2, 3 };
+		subArrays(a, 3);
+	}
+}
+
+
 205. Isomorphic Strings
 
 public class Ismo {
