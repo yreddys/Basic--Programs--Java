@@ -1,5 +1,30 @@
 ```java
 
+Largest odd number in a string ?
+
+public class LargestOddNumberInString {
+
+    public static String largestOddNumber(String num) {
+        // Iterate from the end of the string to the beginning
+        for (int i = num.length() - 1; i >= 0; i--) {
+            // Check if the current character is an odd digit
+            if ((num.charAt(i) - '0') % 2 != 0) {
+                // Return the substring from the start to the current index + 1
+                return num.substring(0, i + 1);
+            }
+        }
+        // If no odd number is found, return an empty string
+        return "";
+    }
+
+    public static void main(String[] args) {
+        String num = "12345678";
+        String result = largestOddNumber(num);
+        System.out.println("The largest odd number in the string is: " + result);
+    }
+}
+
+
 451. Sort Characters By Frequency 
 
 // SubArraysWithTarget
