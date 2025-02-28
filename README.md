@@ -1,3 +1,61 @@
+Generating Possible subarrays
+--------------------------
+
+Pattern 1 
+----------
+
+public class subArrays {
+
+	public static void sub(String str) {
+		int i, j;
+		int n = str.length();
+		for (i = 0; i < n; i++) {
+			for (j = i + 1; j <= n; j++) {
+
+				System.out.println(str.substring(i, j));
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		String s = "abc";
+		sub(s);
+	}
+}
+
+
+pattern 2
+------------
+
+
+public class subAr {
+
+    public static void sub(String str) {
+        int n = str.length();
+        
+        // Loop through each possible starting index
+        for (int i = 0; i < n; i++) {
+            // Loop through each possible ending index after i
+            for (int j = i + 1; j <= n; j++) {
+                // Manually print the substring from index i to j-1
+                // Create a temporary substring by appending characters one by one
+                for (int k = i; k < j; k++) {
+                    System.out.print(str.charAt(k));
+                }
+                System.out.println(); // Print the substring
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        String input = "abc"; // Example string to test
+        sub(input);
+    }
+}
+
+
+
+
 ```java
 
 Largest odd number in a string ?
