@@ -4,6 +4,7 @@ Remove OuterMost Parethesis
 Pattern1
 ------
 
+
 public class Parenthesis {
     
     // Method to check if the string is balanced and remove outermost parentheses
