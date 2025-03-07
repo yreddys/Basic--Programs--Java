@@ -1,7 +1,8 @@
 Remove OuterMost Parethesis
-----------------------------
+------------------------
 
 Pattern1
+----
 
 
 
@@ -49,7 +50,7 @@ Generating Possible subarrays
 --------------------------
 
 Pattern 1 
-----------
+------
 
 public class subArrays {
 
