@@ -1,3 +1,48 @@
+Remove OuterMost Parethesis
+----------------------------
+
+
+
+public class Parenthesis {
+    
+    // Method to check if the string is balanced and remove outermost parentheses
+    public static String removeOutermostParentheses(String str) {
+        // Stack to help with the parentheses matching
+        Stack<Character> stack = new Stack<>();
+        StringBuilder result = new StringBuilder();
+        
+        // Iterate through the string
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (ch == '(') {
+                // If it's the first parenthesis, skip adding it to the result
+                if (!stack.isEmpty()) {
+                    result.append(ch);
+                }
+                stack.push(ch);
+            } else if (ch == ')') {
+                stack.pop();
+                // If it's the last parenthesis, skip adding it to the result
+                if (!stack.isEmpty()) {
+                    result.append(ch);
+                }
+            }
+        }
+        
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(removeOutermostParentheses("(()())"));  // Should return "()"
+        System.out.println(removeOutermostParentheses("(((())))"));  // Should return "(()())"
+        System.out.println(removeOutermostParentheses("()"));  // Should return an empty string ""
+        System.out.println(removeOutermostParentheses("((()()))"));  // Should return "(()())"
+    }
+}
+
+
+
 Generating Possible subarrays
 --------------------------
 
