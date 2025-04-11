@@ -229,7 +229,7 @@ public class Ismo {
 
 ~~~
 1021. Remove Outermost Parentheses
-
+~~~groovy
 public class RemoveOutermostParentheses {
     public String removeOuterParentheses(String s) {
         StringBuilder result = new StringBuilder();
@@ -264,7 +264,7 @@ public class RemoveOutermostParentheses {
 ~~~
 678. Valid Parenthesis String
 
-import java.util.Stack;
+~~~groovy
 
 public class ValidParenthesesBetter {
     public static boolean isValid(String s) {
