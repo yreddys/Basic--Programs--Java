@@ -942,7 +942,7 @@ public class HelloWorld {
 	}
 
 
-~~~groovy
+~~~
 
 
 // 15. java program to reverse an array
