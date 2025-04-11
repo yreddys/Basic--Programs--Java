@@ -1,5 +1,6 @@
+ Remove parenthesis
 ~~~groovy
-// remove parenthesis
+
 public class Parenthesis {
     
     // Method to check if the string is balanced and remove outermost parentheses
@@ -41,11 +42,9 @@ public class Parenthesis {
 ~~~
 
 Generating Possible subarrays
---------------------------
-
 Pattern 1 
-------
 
+~~~groovy
 public class subArrays {
 
 	public static void sub(String str) {
@@ -65,9 +64,10 @@ public class subArrays {
 	}
 }
 
-
+~~~
 pattern 2
-------------
+
+~~~groovy
 
 
 public class subAr {
@@ -95,7 +95,7 @@ public class subAr {
     }
 }
 
-
+~~~
 
 
 ```java
