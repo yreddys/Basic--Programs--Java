@@ -65,7 +65,7 @@ public class subArrays {
 }
 
 ~~~
-pattern 2
+Generating Possible subarrays pattern 2
 
 ~~~groovy
 
