@@ -1207,8 +1207,6 @@ o/p: rahkes ydder olleH
 
 ~~~groovy
 
-
-
 // stringReverseWordByWord 
 
 public class stringReverseWordByWord {
@@ -1230,9 +1228,9 @@ public class stringReverseWordByWord {
 
 ~~
 
+
+
  21 swapping
-
-
 ~~~groovy
 
 public class swapping {
