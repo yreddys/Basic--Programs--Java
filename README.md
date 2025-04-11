@@ -98,10 +98,10 @@ public class subAr {
 ~~~
 
 
-```java
+
 
 Largest odd number in a string ?
-
+~~~groovy
 public class LargestOddNumberInString {
 
     public static String largestOddNumber(String num) {
@@ -124,11 +124,11 @@ public class LargestOddNumberInString {
     }
 }
 
-
+~~~
 451. Sort Characters By Frequency 
 
 // SubArraysWithTarget
-
+~~~groovy
 public class SubArraysWithTarget {
     public static void subArrays(int a[], int target) {
         // Iterate through all possible starting points of subarrays
@@ -158,12 +158,12 @@ public class SubArraysWithTarget {
         subArrays(a, target);
     }
 }
-
+~~~
 // Generating SubArrays
 
 Brute 
-------
 
+~~~groovy
 public class SubArray {
 	public static void subArrays(int a[], int n) {
 		int i, j, k;
@@ -184,9 +184,9 @@ public class SubArray {
 	}
 }
 
-
+~~~
 205. Isomorphic Strings
-
+~~~groovy
 public class Ismo {
     public static boolean ismorphics(String s, String t) {
         // Length check
@@ -227,7 +227,7 @@ public class Ismo {
     }
 }
 
-
+~~~
 1021. Remove Outermost Parentheses
 
 public class RemoveOutermostParentheses {
@@ -261,7 +261,7 @@ public class RemoveOutermostParentheses {
     }
 }
 
-
+~~~
 678. Valid Parenthesis String
 
 import java.util.Stack;
@@ -295,10 +295,12 @@ public class ValidParenthesesBetter {
     }
 }
 
-
+~~~
 Leetcode 189.
 // Right Rotation 
 // a[i+1]=a[i]
+
+~~~groovy
 public class rightRotate {
 	public static int[] rotate(int a[]) {
 		int n = a.length;
@@ -321,9 +323,9 @@ public class rightRotate {
 	}
 }
 
-
-// Second Largest Element
-
+~~~
+ Second Largest Element
+~~~groovy
 public class SecondLargest {
 	public static int findSecondLargest(int a[]) {
 		int n = a.length;
@@ -350,10 +352,10 @@ public class SecondLargest {
 		System.out.println("Second Largest: " + second);
 	}
 }
-
+~~~
 
 Leetcode 75. Sort Colors
-
+~~~groovy
 public class BasicSortArray {
     public static void sortArray(int[] arr) {
         // Count the occurrences of 0, 1, and 2
@@ -396,12 +398,12 @@ public class BasicSortArray {
     }
 }
 
-
+~~~
 
 LeetCode Problem -1299
 (https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/description/)
 
-
+~~~groovy
 public class ReplaceGreatestElement {
 	public static void main(String[] args) {
 		int s[] = { 17, 18, 5, 4, 6, 1 };
@@ -418,6 +420,7 @@ public class ReplaceGreatestElement {
 	}
 }
 
+~~~
 
 
 
@@ -426,10 +429,9 @@ public class ReplaceGreatestElement {
 
 
 
+ 1. Reverse a number / Palindrome
 
-// 1. Reverse a number / Palindrome
-
-package com.numberss;
+~~~groovy
 
 public class Reverse {
     public static void main(String[] args) {
@@ -447,8 +449,9 @@ public class Reverse {
         System.out.println(reverse);
     }
 }
-
-package com.numberss;
+~~~
+Reverse a number
+~~~groovy
 
 public class reverseNumString {
     public static void main(String[] args) {
@@ -459,10 +462,10 @@ public class reverseNumString {
         System.out.println(reverseNum);
     }
 }
-
+~~~
 
 // NumberPalindrome  
-
+~~~groovy
 public class NumberPalindrome {
     public static void main(String[] args) {
         int num = 121;
@@ -482,9 +485,9 @@ public class NumberPalindrome {
         }
     }
 }
-
+~~~
   //  Palindrome for String  
-
+~~~groovy
 public class StringPalindrome {
 	public static void main(String[] args) {
 		String st = "RRR";
@@ -502,9 +505,9 @@ public class StringPalindrome {
 	}
 }
 
-
+~~~
 // 2. Java program to find the 2nd largest number in an array
-
+~~~groovy
 public class ThirdLargestNumberInAnArray {
     public static void main(String args[]) {
         int temp, size;
@@ -523,8 +526,12 @@ public class ThirdLargestNumberInAnArray {
         System.out.println("Third second largest number is:: "+array[size-2]);
     }
 }
+~~~
 
-import java.util.Arrays;
+LargestNumber 
+
+~~~groovy
+
 public class LargestNumberSample {
     public static void main(String args[]) {
         int array[] = {10, 20, 25, 63, 96, 57};
@@ -535,10 +542,10 @@ public class LargestNumberSample {
         System.out.println("2nd largest element is ::"+res);
     }
 }
-
+~~~
 // 3. Find First non repeating character in a String
 
-package com.arrays;
+~~~groovy
 
 public class Hello {
     public static void main(String[] args) {
@@ -557,9 +564,9 @@ public class Hello {
         }
     }
 }
-
+~~~
 // 4. program to find Occurances in String?
-
+~~~groovy
 String input = "aaabbbbcccccddd";
 o/p:  a=3
 b=4
@@ -593,12 +600,9 @@ O/P:
 2 occurs 3 times.
 3 occurs 1 times.
 
-
-package com.practice;
-
-import java.util.HashMap;
-import java.util.Map;
-
+~~~
+Pattern 2 for occurances 
+~~~groovy
 public class Occurrences {
     public static void main(String[] args) {
         int[] a = { 1, 2, 1, 2, 3, 1, 2 };
@@ -613,9 +617,9 @@ public class Occurrences {
         }
     }
 }
-
+~~~
 // 5. Reverse a String 
-
+~~~groovy
 String str = "Hello";
 // Approach -1
 char[] chars = str.toCharArray();
@@ -632,9 +636,9 @@ System.out.println(sb.reverse());
 // Approach -4
 StringBuilder sb1= new StringBuilder();
 System.out.println(sb1.reverse());
-
+~~~
 // 6. Removing Duplicates from String
-
+~~~groovy
 public static void main(String[] args) {
     String str = "HelloHello";
     // Approach -1
@@ -688,9 +692,9 @@ for (char c : str.toCharArray()) {
     }
 }
 System.out.println("Duplicate characters: " + duplicates);
-
+~~~
 // 7. Reverse each Word In Given String
-
+~~~groovy
 public class reverseWord {
     public static void main(String[] args) {
         String str = "Reddy sekhar";
@@ -706,13 +710,11 @@ public class reverseWord {
         System.out.println(output);
     }
 }
-
+~~~
 // 8. To Find Longest SubString without Repeating Characters
+~~~groovy
 
-package com.problems;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 public class longestSubstringWithoutRepeating {
     static void longestSubstring(String s) {
@@ -743,9 +745,9 @@ public class longestSubstringWithoutRepeating {
 
  }
 }
-
+~~~
 // 9. Find the Length of Last Word in String
-
+~~~groovy
 public class findTheLengthOfLastWord {
     static int lastWordLength(String str) {
         int count = 0;
@@ -765,10 +767,10 @@ public class findTheLengthOfLastWord {
         System.out.println(countLastWodrds);
     }
 }
-
+~~~
 // 10. Find the Longest Word in String
 
-package com.problems;
+~~~groovy
 
 public class longestWord {
     static String LongestWord(String str) {
@@ -788,9 +790,9 @@ public class longestWord {
         System.out.println(s);
     }
 }
-
+~~~
 // 11. Find the Length of Each Word in String
-
+~~~groovy
 package longestWord;
 
 class lengthOfeachWord {
@@ -813,9 +815,9 @@ class lengthOfeachWord {
         lengthofeachword("i am an aiExpert");
     }
 }
-
+~~~
 // 12. Find the Longest Word in String and Count
-
+~~~groovy
 class maxLengthInString {
     public static void maxLengthInString(String str) {
         StringBuilder word = new StringBuilder();
@@ -844,11 +846,11 @@ class maxLengthInString {
         maxLengthInString("i am an aiExpert");
     }
 }
-
+~~~
 
 // 13 . program to find all permutations of a string 
 
-package com.march15;
+~~~groovy
 
 public class permutations {
 	static void StringPermutations(String s) {
@@ -878,10 +880,10 @@ public class permutations {
 		StringPermutations("How");
 	}
 }
-
+~~~
 using swapping
--------------------
-package may13;
+
+~~~groovy
 
 public class permutations {
     public static void main(String[] args) {
@@ -909,10 +911,9 @@ public class permutations {
         return String.valueOf(charArray);
     }
 }
-
-==========================
-
-package com.practice;
+~~~
+patter2 permutations 
+~~~groovy
 
 public class HelloWorld {
 	  public static void permutations(String s,String ans){
@@ -941,14 +942,12 @@ public class HelloWorld {
 	}
 
 
-
+~~~groovy
 
 
 // 15. java program to reverse an array
-package com.java8;
 
-import java.util.Arrays;
-
+~~~groovy
 public class reverseArray {
 	public static void main(String[] args) {
 		// Input char array
@@ -974,7 +973,7 @@ public class reverseArray {
 
 	}
 }
-
+~~~
 16. to find pairs of integers in an array that sum up to a given target sum.?
 
 I/P: {0, 4, 5, 6, 1, 2, 3};
@@ -983,7 +982,7 @@ O/P:
 1,4
 2,3
 
-
+~~~groovy
 public class Main {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6};
@@ -1003,12 +1002,10 @@ public class Main {
     }
 }
 
-
+~~~
  to find pairs of integers in an array that multiply  to a given target sum.?
 
-package com.practice;
-
-import java.util.HashSet;
+~~~groovy
 
 public class PairProduct {
 
@@ -1040,13 +1037,13 @@ public class PairProduct {
     }
 }
 
-
+~~~
 
 17 . Write a program that utilizes a HashMap to count the occurrences of each word
 
  
 
-import java.util.HashMap;
+~~~groovy
 
 public class WordCounter {
     public static void main(String[] args) {
@@ -1071,8 +1068,10 @@ public class WordCounter {
     }
 }
 
-
+~~~
 18 .Factorial
+
+~~~groovy
 public class factorial {
 
 	public static void main(String[] args) {
@@ -1094,10 +1093,10 @@ public class factorial {
 		
 	
 }
-
+~~~
 19. factors 
 
-
+~~~groovy
 
 public class factors {
 
@@ -1112,10 +1111,10 @@ public class factors {
 	}
 }
 
-
+~~~
 
 20 Fibonacci
-
+~~~groovy
 
 public class fibonacci {
 
@@ -1140,14 +1139,13 @@ public class fibonacci {
 	}
 }
 
-
+~~~
 
 
 // String Reverse
 
 
-
-import java.util.Arrays;
+~~~groovy
 
 public class Example {
 public static void main(String[] args) {
@@ -1166,10 +1164,10 @@ for (int i = 0; i < s2.length; i++)
 }
 System.out.print("Reversed string : " + reversedString);
 }}
-
+~~~
 Original string : hello reddy sekhar
 Reversed string :lleh ydder rahkes 
-
+~~~groovy
 public class stringReverseCharactorsWordsConstant {
 public static void main(String[] args) {
 	
@@ -1189,7 +1187,9 @@ public static void main(String[] args) {
 	
 }
 }
-
+~~~
+pattern 2 
+~~~groovy
 public class Reverse {
 
 	
@@ -1203,6 +1203,7 @@ public class Reverse {
 input : hello reddy sekhar
 o/p: rahkes ydder olleH
 
+~~~
 
 
 
