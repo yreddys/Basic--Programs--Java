@@ -1226,7 +1226,7 @@ public class stringReverseWordByWord {
 	}
 }
 
-~~
+ ~~~
 
 
 
@@ -1247,6 +1247,7 @@ public class swapping {
 	}
 }
 ~~~
+
   // swappingWithThirdVaraible
 ~~~groovy
 
@@ -1727,6 +1728,7 @@ public class FindHighestNumber {
  *********
 **********
 
+
 ~~~groovy
 
 public class PyramidDemo {
@@ -1744,6 +1746,8 @@ public class PyramidDemo {
 	}
 }
 ~~~
+
+
 // program to print the following ?
 
          * 
