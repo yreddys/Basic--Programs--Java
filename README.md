@@ -1200,10 +1200,12 @@ public class Reverse {
 		    }
 		  }
 		}
+
+~~~
 input : hello reddy sekhar
 o/p: rahkes ydder olleH
 
-~~~
+~~~groovy
 
 
 
@@ -1226,12 +1228,12 @@ public class stringReverseWordByWord {
 	}
 }
 
-
+~~
 
  21 swapping
 
 
-package com.nov29;
+~~~groovy
 
 public class swapping {
 
@@ -1246,9 +1248,9 @@ public class swapping {
 		System.out.println(a+" "+b);
 	}
 }
-
+~~~
   // swappingWithThirdVaraible
-
+~~~groovy
 
 public class swappingWithThirdVaraible {
 
@@ -1264,10 +1266,10 @@ public class swappingWithThirdVaraible {
 	System.out.println(a+" "+b);
 	}
 }
-
+~~~
  // 22 .Reverse an Array
 
-package java8;
+~~~groovy
 
 public class arrayReverse {
 	public static void reverseArray(int[] arr) {
@@ -1301,9 +1303,11 @@ public class arrayReverse {
 
 	}
 }
+
+~~~
 // Reverse an Array
 
-package com.MultiDime;
+~~~groovy
 
 public class ReverseAnArray {
 	public static void main(String[] args) {
@@ -1313,10 +1317,10 @@ public class ReverseAnArray {
 		}
 	}
 }
-
+~~~
 // Second Highest Element from an Array
 
-package com.MultiDime;
+~~~groovy
 
 import java.util.Arrays;
 
@@ -1331,12 +1335,12 @@ public class SecondHighest {
         System.out.println("The second highest element is: " + secondHighest);
     }
 }
-
+~~~
 // java program to move zero to first
 input:0,1,0,1,1,0
 Output:0,0,0,1,1,1
 
-package com.array;
+~~~groovy
 
 public class movingZeros {
     public static void main(String[] args) {
@@ -1372,9 +1376,10 @@ public class movingZeros {
     }
 }
 
+~~~
 // Moving Zeros to Last
 
-package com.array;
+~~~groovy
 
 public class movingZeros {
     public static void main(String[] args) {
@@ -1409,10 +1414,10 @@ public class movingZeros {
         }
     }
 }
-
+~~~
 // Array Rotation to left In java
 
-
+~~~groovy
 
 
 package com.array;
@@ -1435,11 +1440,11 @@ public class arrayRotationToLeft {
 		}
 	}
 }
-
+~~~
 // Array Rotation to right In java
 
 
-package com.practice;
+~~~groovy
 
 
 
@@ -1467,14 +1472,14 @@ public class ArrayRotationToRight {
     }
 }
 
-
+~~~
 
  // Remove All Adjacent Duplicates In String
 
 by iterating through the string and removing adjacent duplicates directly
----------------------------------------------------
 
 
+~~~groovy
 public class RemoveAdjacentDuplicates {
     public String removeDuplicates(String s) {
         StringBuilder sb = new StringBuilder();
@@ -1504,10 +1509,9 @@ public class RemoveAdjacentDuplicates {
         
     }
 }
-
+~~~
 using stack
----------------
-package com.java8;
+~~~groovy
 
 import java.util.Stack;
 
@@ -1542,14 +1546,11 @@ public class RemoveAdjacentDuplicates {
        
     }
 }
-
+~~~
 //  Write a Java program that counts and displays the occurrences of duplicate characters in a given string. 
 //  A character is considered a duplicate if it appears more than once in the string. ?
 
-package com.duplicates;
-import java.util.HashMap;
-import java.util.Map;
-
+~~~groovy
 public class duplicatesCount {
     public static void main(String[] args) {
         String str = "aabaabcd";
@@ -1569,9 +1570,9 @@ public class duplicatesCount {
         }
     }
 }
-
+~~~
 // To swap words in an array based on their length in Java
-
+~~~groovy
 public class SwappingBasedOnLength {
     public static void main(String[] args) {
         String[] str = { "Reddy", "i", "am", "sekhar" };
@@ -1594,9 +1595,9 @@ public class SwappingBasedOnLength {
     }
 }
 
-
+~~~
 242. Valid Anagram 
-
+~~~groovy
 public class Anagram {
 	public static boolean areAnagrams(String s, String s2) {
 		if (s.length() != s2.length()) {
@@ -1619,12 +1620,11 @@ public class Anagram {
 		}
 	}
 }
-
+~~~
 //  To find triplets in the array that sum up to a given target
 // Print all triplets with given sum
 
-import java.util.Arrays;
-
+~~~groovy
 public class TripletSum {
 	public static void findTriplets(int[] arr, int targetSum) {
 		Arrays.sort(arr);
@@ -1656,12 +1656,11 @@ public class TripletSum {
 		findTriplets(arr, targetSum);
 	}
 }
-
+~~~
 // Write a Java program to count consecutive occurrences of each character in a given string
 // and print each character along with its count.
 
-
-package com.practice;
+~~~groovy
 public class ContinuousCharacterCounter {
     public static void main(String[] args) {
         String input = "aabbbccabbdc";
@@ -1692,11 +1691,11 @@ public class ContinuousCharacterCounter {
         System.out.println(currentChar + " = " + count );
     }
 }
-
+~~~
 // To  Write java program to find highest number in array with single loop
-========================================================================
+~~~groovy
 
-package com.practice;
+
 
 
 public class FindHighestNumber {
@@ -1717,7 +1716,7 @@ public class FindHighestNumber {
         System.out.println("Highest number in the array: " + max);
     }
 }
-
+~~~
 // program to print the following ?
          *
         **
@@ -1730,7 +1729,7 @@ public class FindHighestNumber {
  *********
 **********
 
-package com.practice;
+~~~groovy
 
 public class PyramidDemo {
 	public static void main(String[] args) {
@@ -1746,7 +1745,7 @@ public class PyramidDemo {
 		}
 	}
 }
-
+~~~
 // program to print the following ?
 
          * 
@@ -1761,7 +1760,7 @@ public class PyramidDemo {
 * * * * * * * * * *
 
 
-package com.practice;
+~~~groovy
 
 public class PyramidDemo {
 	public static void main(String[] args) {
@@ -1778,7 +1777,7 @@ public class PyramidDemo {
 	}
 }
 
-
+~~~
  // program to print the following ?
 
 1 
@@ -1787,7 +1786,7 @@ public class PyramidDemo {
 7 8 9 10 
 11 12 13 14 15 
 
-package com.practice;
+~~~groovy
 
 public class PatternDemo1 {
 	public static void main(String[] args) {
@@ -1802,9 +1801,10 @@ public class PatternDemo1 {
 
 	}
 }
+~~~
 //  Valid Parenthesis problem in java
 
-package com.practice;
+~~~groovy
 
 import java.util.Stack;
 
@@ -1850,9 +1850,9 @@ public class ValidParenthesis {
         System.out.println(isValid(test5)); // true
     }
 }
-
+~~~
 // finding the Longest common prefix from list of Strings
-import java.util.Arrays;
+~~~groovy
 
 public class LongestCommonPrefix {
 	public static void main(String[] args) {
@@ -1878,12 +1878,11 @@ public class LongestCommonPrefix {
 	}
 }
 
-
+~~~
 
 //  Java program to find the first and last index of a given integer in an array?
 
-package com.july8.v10;
-
+~~~groovy
 import java.util.Arrays;
 
 public class FirstAndLastIndex {
@@ -1910,10 +1909,12 @@ public class FirstAndLastIndex {
 		return arr;
 	}
 }
+
+~~~
 // Missing Number from Array
 
 
-package com.july8.v10;
+~~~groovy
 
 public class MissingNumber{
 	public static int missingNumber(int a[], int n) {
@@ -1934,9 +1935,10 @@ public class MissingNumber{
 
 	}
 }
+~~~
 // a Java program that reverses a portion of an array based on given start and end indices ?
 
-package com.july8.j8.v2;
+~~~groovy
 
 public class ArrayReverseBasedIndexPosition {
 	public static void main(String[] args) {
@@ -1956,10 +1958,10 @@ public class ArrayReverseBasedIndexPosition {
 		}
 	}
 }
-
+~~~
 //  print a matrix in a snake pattern in Java
 
-package com.july18;
+~~~groovy
 
 public class SnakePattern {
 	public static void printMatrixInSnakePattern(int[][] matrix) {
@@ -1984,10 +1986,10 @@ public class SnakePattern {
 		printMatrixInSnakePattern(matrix);
 	}
 }
-
+~~~
 
 // Swapping the Array
-
+~~~groovy
 public class SwapElements {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5};
@@ -2016,7 +2018,7 @@ public class SwapElements {
         }
     }
 }
-
+~~~
 
 // Longest Palindrome
 // Common Characters 
@@ -2024,5 +2026,5 @@ public class SwapElements {
 // Can you  write a program that counts the number of zeros in an array?
 Input : {0, 2, 0, 4, 0, 6, 0}
 Output: 4
-```
+
 
