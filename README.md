@@ -1,11 +1,5 @@
-Remove OuterMost Parethesis
-------------------------
-
-Pattern1
-----
-
-
-
+~~~groovy
+// remove parenthesis
 public class Parenthesis {
     
     // Method to check if the string is balanced and remove outermost parentheses
@@ -44,7 +38,7 @@ public class Parenthesis {
     }
 }
 
-
+~~~
 
 Generating Possible subarrays
 --------------------------
