@@ -31,5 +31,42 @@ public class SubstringCounter {
 }
 
 
+1248. Count Number of Nice Subarrays
+
+
+public class BruteNiceSubarrays {
+    public int numberOfSubarrays(int[] nums, int k) {
+        int n = nums.length;
+        int count = 0;
+
+        for (int i = 0; i < n; i++) {
+            int oddCount = 0;
+
+            for (int j = i; j < n; j++) {
+                if (nums[j] % 2 != 0) {
+                    oddCount++;
+                }
+
+                if (oddCount == k) {
+                    count++;
+                } else if (oddCount > k) {
+                    break; // Optimization: no need to check further
+                }
+            }
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+        BruteNiceSubarrays obj = new BruteNiceSubarrays();
+        int[] nums = {1, 1, 2, 1, 1};
+        int k = 3;
+        System.out.println(obj.numberOfSubarrays(nums, k)); 
+    }
+}
+
+
+
 
 
