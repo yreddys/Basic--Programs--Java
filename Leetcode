@@ -1,5 +1,5 @@
 1358.  Number of Substrings Containing All Three Characters ?
-
+      brute 
 public class SubstringCounter {
     public int numberOfSubstrings(String s) {
         int n = s.length();
