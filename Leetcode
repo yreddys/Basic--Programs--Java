@@ -33,7 +33,7 @@ public class SubstringCounter {
 
 1248. Count Number of Nice Subarrays
 
-
+ brute
 public class BruteNiceSubarrays {
     public int numberOfSubarrays(int[] nums, int k) {
         int n = nums.length;
