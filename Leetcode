@@ -1,3 +1,37 @@
+1004. Max Consecutive Ones III
+ brute 
+public class MaxConsecutiveOnesIII {
+
+    public static int longestOnes(int[] nums, int k) {
+        int maxLen = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            int zeroCount = 0;
+
+            for (int j = i; j < nums.length; j++) {
+                if (nums[j] == 0) {
+                    zeroCount++;
+                }
+
+                if (zeroCount > k) {
+                    break;
+                }
+
+                maxLen = Math.max(maxLen, j - i + 1);
+            }
+        }
+
+        return maxLen;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0};
+        int k = 2;
+        System.out.println("Max Consecutive Ones (Brute Force with i and j): " + longestOnes(nums, k));
+    }
+}
+
+
 1358.  Number of Substrings Containing All Three Characters ?
       brute 
 public class SubstringCounter {
