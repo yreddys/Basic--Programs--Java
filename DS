@@ -1,3 +1,116 @@
+// Implement Stack using Arrays
+
+public class Stack {
+    private int maxSize;
+    private int[] stackArray;
+    private int top;
+
+    // Constructor to initialize the stack
+    public Stack(int size) {
+        this.maxSize = size;
+        this.stackArray = new int[maxSize];
+        this.top = -1;  // Indicates stack is initially empty
+    }
+
+    // Push operation: adds element to the top
+    public void push(int value) {
+        if (isFull()) {
+            System.out.println("Stack is full. Cannot push " + value);
+            return;
+        }
+        top = top + 1;                 // Increment top
+        stackArray[top] = value;       // Assign value to the new top position
+        System.out.println(value + " pushed into stack");
+    }
+
+    // Pop operation: removes and returns top element
+    public int pop() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty. Cannot pop");
+            return -1;
+        }
+        int poppedValue = stackArray[top];  // Store the value to return
+        top = top - 1;                      // Decrement top
+        return poppedValue;
+    }
+
+    // Peek operation: returns top element without removing
+    public int peek() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty. Nothing to peek");
+            return -1;
+        }
+        return stackArray[top];
+    }
+
+    // Check if stack is empty
+    public boolean isEmpty() {
+        if (top == -1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // Check if stack is full
+    public boolean isFull() {
+        if (top == maxSize - 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // Display stack elements
+    public void display() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty.");
+            return;
+        }
+
+        System.out.print("Stack elements: ");
+        for (int i = 0; i <= top; i = i + 1) {
+            System.out.print(stackArray[i] + " ");
+        }
+        System.out.println();
+    }
+
+    // Main method to test the stack
+    public static void main(String[] args) {
+        Stack myStack = new Stack(5);
+
+        myStack.push(10);
+        myStack.push(20);
+        myStack.push(30);
+        myStack.display();
+
+        int topElement = myStack.peek();
+        System.out.println("Top element is: " + topElement);
+
+        int poppedElement = myStack.pop();
+        System.out.println("Popped element: " + poppedElement);
+
+        myStack.display();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 1. Program to find the MissingNumber
 
 public class MissingNumberBruite {
