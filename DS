@@ -1,3 +1,98 @@
+// Implement queue using Arrays
+
+public class Queue {
+    private int maxSize;
+    private int[] queueArray;
+    private int front;  // Points to the first element
+    private int top;    // Points to the last element inserted
+
+    // Constructor to initialize the queue
+    public Queue(int size) {
+        this.maxSize = size;
+        this.queueArray = new int[maxSize];
+        this.front = 0;   // Queue starts from 0
+        this.top = -1;    // Initially, queue is empty
+    }
+
+    // Enqueue: Adds element at the end of the queue
+    public void enqueue(int value) {
+        if (isFull()) {
+            System.out.println("Queue is full. Cannot enqueue " + value);
+            return;
+        }
+        top++;
+        queueArray[top] = value;
+        System.out.println(value + " enqueued into queue");
+    }
+
+    // Dequeue: Removes and returns the front element
+    public int dequeue() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty. Cannot dequeue");
+            return -1;
+        }
+        int removed = queueArray[front];
+        front++;
+        return removed;
+    }
+
+    // Peek: View the front element without removing it
+    public int peek() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty. Nothing to peek");
+            return -1;
+        }
+        return queueArray[front];
+    }
+
+    // Check if the queue is empty
+    public boolean isEmpty() {
+        return front > top;
+    }
+
+    // Check if the queue is full
+    public boolean isFull() {
+        return top == maxSize - 1;
+    }
+
+    // Display the elements in the queue
+    public void display() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty.");
+            return;
+        }
+        System.out.print("Queue elements: ");
+        for (int i = front; i <= top; i++) {
+            System.out.print(queueArray[i] + " ");
+        }
+        System.out.println();
+    }
+
+    // Main method to test the Queue
+    public static void main(String[] args) {
+        Queue myQueue = new Queue(5);
+
+        myQueue.enqueue(10);
+        myQueue.enqueue(20);
+        myQueue.enqueue(30);
+        myQueue.display();
+
+        System.out.println("Front element is: " + myQueue.peek());
+
+        System.out.println("Dequeued element: " + myQueue.dequeue());
+        myQueue.display();
+
+        myQueue.enqueue(40);
+        myQueue.enqueue(50);
+        myQueue.enqueue(60); // Should be full after this
+        myQueue.enqueue(70); // Should print "Queue is full"
+        myQueue.display();
+    }
+}
+
+
+
+
 // Implement Stack using Arrays
 
 public class Stack {
