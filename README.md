@@ -185,7 +185,10 @@ public class SubArray {
 }
 
 ~~~
-205. Isomorphic Strings
+Isomorphic Strings
+
+If two strings follow the same character pattern, they are isomorphic.
+
 ~~~groovy
 public class Ismo {
     public static boolean ismorphics(String s, String t) {
